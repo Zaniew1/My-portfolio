@@ -1,0 +1,53 @@
+@mixin flex($just, $ali, $dir)
+    display: flex
+    justify-content: $just
+    align-items: $ali
+    flex-direction: $dir
+@mixin position-center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+@mixin h1-style
+    text-transform: uppercase
+    font-weight: bold
+    letter-spacing: 2px
+    margin: 0
+@mixin h2-style
+    color: $gray-bgc
+    letter-spacing: 1px
+    text-transform: uppercase
+    font-family: $family-rubik
+@mixin button-style
+    width: 35vw
+    height: 40px
+    background-color: $button-bgc
+    border: none
+    cursor: pointer
+    color: $white-bgc
+    font-family: $family-rubik
+    font-size: 11px
+    font-weight: bold
+    text-transform: uppercase
+@mixin contact__h2
+    font-size: 15px
+    color: $font-color
+    font-family: $family-playfair
+    font-weight: 400
+    padding-bottom: 20px
+@mixin contact__line
+    font-size: 13px
+    font-family: $family-rubik
+    color: $gold-bgc
+@mixin pictureJpg ($picture)
+    background-image: url("../imgKarina/#{$picture}.jpg")
+    background-position: center
+    background-size: cover
+@mixin picturePng ($picture)
+    background-image: url("../imgKarina/#{$picture}.png")
+    background-position: center
+    background-size: cover
+@mixin pictureJpeg ($picture)
+    background-image: url("../imgKarina/#{$picture}.JPEG")
+    background-position: center
+    background-size: cover
