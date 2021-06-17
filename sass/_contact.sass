@@ -1,0 +1,82 @@
+.contact__wrap
+    @include flex(flex-start, center, column)
+    margin: 5vh auto
+    width: 300px
+    background-color: $font-bgc
+    @include mq (phablet)
+        width: 500px
+    @include mq(tablet)
+        width: 350px
+        margin: 5vh auto 5vh 0
+    @include mq (tablet-wide)
+        width: 450px
+    @include mq-land(phone)
+        width: 70vw
+    @include mq-land(tablet)
+        width: 350px
+        margin: 5vh auto 5vh 0
+    @include mq-land(tablet-wide)
+        width: 450px
+            @include mq-land(desktop)
+        width: 600px
+    @include mq-land(desktop-wide)
+        width: 850px
+        height: 900px
+    .contact__form
+        @include flex(center, center, column)
+        width: 100%
+        height: 100%
+        .contact__form-header
+            @include flex(center, center, row)
+            @include contact__h2
+            font-size: 20px
+            margin: 30px auto
+            @include mq-land(desktop)
+                font-size: 30px
+            @include mq-land(desktop-wide)
+                font-size: 40px
+            .contact__input
+                margin: 10px 5%
+                width: 90%
+                height: 40px
+                border: 1px solid #fff
+                outline: none
+                padding: 0 10px
+                color: #fff
+                @include mq-land(desktop)
+                    font-size: 18px
+                    width: 70%
+                    height: 60px
+                @include mq-land(desktop-wide)
+                    font-size: 24px
+                &:focus
+                    background-color: $white-color
+
+                .contact__text
+                    
+                    margin: 10px 5%
+                    width: 90%
+                    height: 200px
+                    border: 1px solid $bright-color
+                    outline: none
+                    padding: 10px 10px
+                    color: $bright-color
+                    resize: vertical
+                    @include mq-land(desktop)
+                        font-size: 18px
+                        width: 70%
+                        height: 300px
+                    @include mq-land(desktop-wide)
+                        font-size: 24px
+                .contact__submit
+                    @include button-style
+                    @include flex(center, center, column)
+                    width: 50%
+                    margin: 30px auto 
+                    transition: .3s ease-in-out
+                    @include mq-land(desktop)
+                        font-size: 16px
+                        height: 60px
+                    &:hover
+                        background-color: $white-color
+                        color: #fff

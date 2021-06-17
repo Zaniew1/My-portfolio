@@ -338,4 +338,125 @@ body .indexWrapper {
   text-align: center;
   color: #616161;
 }
+
+.tech .tech__wrapper .tech__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 10em;
+  width: 100%;
+}
+
+.tech .tech__wrapper .tech__header .tech__h2 {
+  font-size: 33px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #616161;
+}
+
+.tech .tech__wrapper .tech__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tech .tech__wrapper .tech__wrap .tech__learned .tech__h3 {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #616161;
+}
+
+.tech .tech__wrapper .tech__wrap .tech__learning .tech__h3 {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #616161;
+}
+
+.tech .tech__wrapper .tech__wrap .tech__to-learn .tech__h3 {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #616161;
+}
+
+.tech .tech__wrapper .tech__wrap .tech__technology {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 60%;
+  height: 2em;
+  background-color: #45a29e;
+  margin: 5px auto;
+}
+
+.tech .tech__wrapper .tech__wrap .tech__technology .tech__image {
+  width: 30px;
+  height: 30px;
+}
+
+.tech .tech__wrapper .tech__wrap .tech__technology .tech__image:nth-of-type(1) {
+  background-image: url("../img/Css.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.tech .tech__wrapper .tech__wrap .tech__technology .tech__image:nth-of-type(2) {
+  background-image: url("../img/html.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.tech .tech__wrapper .tech__wrap .tech__technology .tech__image:nth-of-type(3) {
+  background-image: url("../img/js.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.tech .tech__wrapper .tech__wrap .tech__technology .tech__image:nth-of-type(4) {
+  background-image: url("../img/sass.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.tech .tech__wrapper .tech__wrap .tech__technology .tech__image:nth-of-type(5) {
+  background-image: url("../img/vsc.png");
+  background-position: center;
+  background-size: cover;
+}
 /*# sourceMappingURL=main.css.map */
