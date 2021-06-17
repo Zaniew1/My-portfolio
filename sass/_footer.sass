@@ -1,0 +1,37 @@
+.footer
+    @include flex(center, center, column)
+    position: relative
+    @include picturePng(dark)
+    border-top: 1px solid $font-bgc
+    .footer__go-up
+        @include flex(center, center, row)
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-50%, -50%)
+        background-color: $bright-color
+        min-width: 40px 
+        min-height: 50px
+        .footer__go-up-icon
+            color: $white-color
+            font-size: 28px
+    .footer__wrapper
+        @include flex(space-around, flex-end, row)
+        width: 100%
+        min-height: 8em
+        .footer__social
+            @include flex(center, center, row)
+            width: 3.5em
+            height: 3.5em
+            background-color: #2d2e38
+            z-index: 4
+            .footer__icon
+                font-size: 24px
+                color: $white-color
+    .footer__copy
+        @include flex(center, center, row)
+        width: 100%
+        height: 5em
+        .footer__text
+            font-family: $family-raleway
+            color: $font-bgc

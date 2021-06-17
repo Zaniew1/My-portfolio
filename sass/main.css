@@ -430,33 +430,118 @@ body .indexWrapper {
   height: 30px;
 }
 
-.tech .tech__wrapper .tech__wrap .tech__technology .tech__image:nth-of-type(1) {
-  background-image: url("../img/Css.png");
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  background-image: url("../img/dark.png");
   background-position: center;
   background-size: cover;
+  border-top: 1px solid #616161;
 }
 
-.tech .tech__wrapper .tech__wrap .tech__technology .tech__image:nth-of-type(2) {
-  background-image: url("../img/html.png");
-  background-position: center;
-  background-size: cover;
+.footer .footer__go-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #66fcf1;
+  min-width: 40px;
+  min-height: 50px;
 }
 
-.tech .tech__wrapper .tech__wrap .tech__technology .tech__image:nth-of-type(3) {
-  background-image: url("../img/js.png");
-  background-position: center;
-  background-size: cover;
+.footer .footer__go-up .footer__go-up-icon {
+  color: #fff;
+  font-size: 28px;
 }
 
-.tech .tech__wrapper .tech__wrap .tech__technology .tech__image:nth-of-type(4) {
-  background-image: url("../img/sass.png");
-  background-position: center;
-  background-size: cover;
+.footer .footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  min-height: 8em;
 }
 
-.tech .tech__wrapper .tech__wrap .tech__technology .tech__image:nth-of-type(5) {
-  background-image: url("../img/vsc.png");
-  background-position: center;
-  background-size: cover;
+.footer .footer__wrapper .footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 3.5em;
+  height: 3.5em;
+  background-color: #2d2e38;
+  z-index: 4;
+}
+
+.footer .footer__wrapper .footer__social .footer__icon {
+  font-size: 24px;
+  color: #fff;
+}
+
+.footer .footer__copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 5em;
+}
+
+.footer .footer__copy .footer__text {
+  font-family: "Raleway", sans-serif;
+  color: #616161;
 }
 /*# sourceMappingURL=main.css.map */
