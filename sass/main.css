@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+body .indexWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #616161;
+  height: 10vh;
+  border-bottom: 4px solid #66fcf1;
+  z-index: 2;
+}
+
+.nav .nav__bar {
+  font-size: 22px;
+  margin: 0 30px;
+  color: #fff;
+}
+
+.front {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #0b0c10;
+  background-image: url("../img/dark.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.front .front__face {
+  width: 40vw;
+  height: 40vw;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
+  opacity: 0.9;
+  margin: 20px auto;
+  background-image: url("../img/me.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.front .front__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.front .front__text .front__text-h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  margin: 2vh auto;
+  font-weight: 300;
+  color: #fff;
+}
+
+.front .front__text .front__text-h1 .front__span {
+  color: #66fcf1;
+}
+
+.front .front__text .front__text-h2 {
+  width: 80%;
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  margin: 0 auto 5vh auto;
+}
+
+.front .front__text .front__button {
+  width: 50%;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.about .about__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 10em;
+  width: 100%;
+}
+
+.about .about__header .about__h2 {
+  font-size: 33px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #616161;
+}
+
+.about .about__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.about .about__wrap .about__pros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 12em;
+  width: 42%;
+  margin: 0 auto;
+}
+
+.about .about__wrap .about__pros .about__six-angles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80px;
+  height: 80px;
+  background-color: #45a29e;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
+}
+
+.about .about__wrap .about__pros .about__six-angles .about__six-angles-icon {
+  color: #fff;
+  font-size: 30px;
+}
+
+.about .about__wrap .about__pros .about__caption {
+  margin: 10px auto 5px auto;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #616161;
+}
+
+.about .about__wrap .about__pros .about__description {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  text-align: center;
+  color: #616161;
+}
+
+.about .about__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+}
+
+.about .about__wrapper .about__me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-image: url("../img/me.jpg");
+  background-position: center;
+  background-size: cover;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 60vw;
+  height: 60vw;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
+}
+
+.about .about__wrapper .about__text-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px auto;
+}
+
+.about .about__wrapper .about__text-wrap .about__me-header {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #616161;
+  margin: 10px auto;
+}
+
+.about .about__wrapper .about__text-wrap .about__me-description {
+  font-family: "Raleway", sans-serif;
+  font-size: 11px;
+  text-align: center;
+  color: #616161;
+}
+/*# sourceMappingURL=main.css.map */

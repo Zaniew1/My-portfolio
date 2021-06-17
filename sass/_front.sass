@@ -1,0 +1,41 @@
+.front
+    @include flex(center, center, column)
+    width: 100%
+    height: 100%
+    background-color: $bgc-color
+    @include picturePng (dark)
+    .front__face
+        width: 40vw
+        height: 40vw
+        clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0)
+        opacity: 0.9
+        margin: 20px auto
+        @include pictureJpg(me)
+    .front__text
+        @include flex(center, center, column)
+        text-align: center
+        .front__text-h1
+            font-family: 'Raleway', sans-serif
+            font-size: 20px
+            margin: 2vh auto
+            font-weight: 300
+            color: $white-color
+            .front__span
+                color: $bright-color
+        .front__text-h2
+            width: 80%
+            font-weight: 400
+            font-family: 'Raleway', sans-serif
+            font-size: 14px
+            color: $white-color
+            margin: 0 auto 5vh auto
+        .front__button
+            width: 50%
+            height: 40px
+            background-color: transparent
+            border: 2px solid $white-color
+            color: $white-color
+            font-weight: 400
+            font-family: 'Raleway', sans-serif
+            font-size: 12px
+

@@ -1,0 +1,71 @@
+.about
+    @include flex(center, center, column)
+    width: 100%
+    flex-wrap: wrap
+    flex-grow: 1
+    .about__header
+        @include flex(center, center, row)
+        height: 10em
+        width: 100%
+        .about__h2
+            font-size: 33px
+            font-family: $family-raleway
+            text-transform: uppercase
+            font-weight: bold
+            color: $font-bgc
+    .about__wrap
+        @include flex(center,center,row)
+        flex-wrap: wrap
+        margin: 20px auto
+
+        .about__pros
+            @include flex(flex-start, center, column)
+            height: 12em
+            width: 42%
+            margin: 0 auto
+            .about__six-angles
+                @include flex(center, center, column)
+                width: 80px
+                height: 80px
+                background-color: $tone-color
+                clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0)
+                .about__six-angles-icon
+                    color: $white-color
+                    font-size: 30px
+            .about__caption
+                margin: 10px auto 5px auto
+                font-family: $family-raleway
+                font-size: 16px
+                font-weight: bold
+                
+                color: $font-bgc
+            .about__description
+                font-family: $family-raleway
+                font-weight: 400
+                font-size: 11px
+                text-align: center
+                color: $font-bgc
+    .about__wrapper
+        @include flex(center,center,column)
+        width: 90%
+        .about__me
+            @include flex(center,center,row)
+            @include pictureJpg(me)
+            flex-wrap: wrap
+            width: 60vw
+            height: 60vw
+            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0)
+        .about__text-wrap
+            @include flex(center,center,column)
+            margin: 10px auto
+            .about__me-header
+                font-family: $family-raleway
+                font-size: 20px
+                font-weight: bold
+                color: $font-bgc
+                margin: 10px auto
+            .about__me-description
+                font-family: $family-raleway
+                font-size: 11px
+                text-align: center
+                color: $font-bgc
