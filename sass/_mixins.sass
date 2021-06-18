@@ -13,32 +13,26 @@
     font-weight: bold
     letter-spacing: 2px
     margin: 0
+@mixin h2-wrapper
+    @include flex(center, center, row)
+    height: 10em
+    width: 100%
 @mixin h2-style
-
-    letter-spacing: 1px
+    font-size: 33px
+    font-family: $family-raleway
     text-transform: uppercase
-
-@mixin button-style
-    width: 35vw
-    height: 40px
- 
-    border: none
-    cursor: pointer
-
-
-    font-size: 11px
     font-weight: bold
-    text-transform: uppercase
-@mixin contact__h2
-    font-size: 15px
-
-
+    color: $font-bgc
+@mixin button-style
+    width: 50%
+    height: 40px
+    background-color: transparent
+    border: 2px solid $white-color
+    color: $white-color
     font-weight: 400
-    padding-bottom: 20px
-@mixin contact__line
-    font-size: 13px
-
-
+    font-family: $family-raleway
+    font-size: 12px
+    transition: .3s ease-in-out
 @mixin pictureJpg ($picture)
     background-image: url("../img/#{$picture}.jpg")
     background-position: center
@@ -46,7 +40,7 @@
 @mixin picturePng ($picture)
     background-image: url("../img/#{$picture}.png")
     background-position: center
-    background-size: cover
+    background-size: auto
 @mixin pictureJpeg ($picture)
     background-image: url("../img/#{$picture}.JPEG")
     background-position: center

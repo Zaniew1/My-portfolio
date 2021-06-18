@@ -1,9 +1,39 @@
 .contact
+    @include picturePng(dark)
+ 
     .contact__header
+        @include h2-wrapper
         .contact__h2
+            @include h2-style
+            color: 
     .contact__wrap
         .contact__form
+            @include flex(center,center,column)
             .contact__form-header
+                font-family: $family-raleway
+                color: $bright-color
+                font-size: 11px
             .contact__input
+                background-color: $font-bgc
+                width: 90%
+                min-height: 40px
+                margin: 10px auto
+                border: 1px solid $bright-color
+                font-family: $family-raleway
+                padding: 10px 10px
+                &:focus 
             .contact__text
+                background-color: $font-bgc
+                font-family: $family-raleway
+                margin: 10px 5%
+                width: 90%
+                height: 200px
+                border: 1px solid $bright-color
+                outline: none
+                padding: 10px 10px
+                color: $bright-color
+                resize: vertical
             .contact__submit
+                @include button-style
+                
+                margin: 20px auto 50px auto

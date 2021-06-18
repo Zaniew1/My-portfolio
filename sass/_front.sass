@@ -15,7 +15,7 @@
         @include flex(center, center, column)
         text-align: center
         .front__text-h1
-            font-family: 'Raleway', sans-serif
+            font-family: $family-raleway
             font-size: 20px
             margin: 2vh auto
             font-weight: 300
@@ -25,17 +25,10 @@
         .front__text-h2
             width: 80%
             font-weight: 400
-            font-family: 'Raleway', sans-serif
+            font-family: $family-raleway
             font-size: 14px
             color: $white-color
             margin: 0 auto 5vh auto
         .front__button
-            width: 50%
-            height: 40px
-            background-color: transparent
-            border: 2px solid $white-color
-            color: $white-color
-            font-weight: 400
-            font-family: 'Raleway', sans-serif
-            font-size: 12px
+            @include button-style
 

@@ -1,0 +1,42 @@
+.projects
+    margin: 10% auto 30% auto
+    .projects__header
+        @include h2-wrapper
+        .projects__h2
+            @include h2-style
+    .projects__search
+        @include flex(space-around, center, row)
+        
+        width: 95%
+        margin: 2em auto
+        .projects__technology
+            @include flex(center, center, row)
+            width: 25%
+            height: 2.4em
+            font-size: 0.7em
+            color: $font-bgc
+    .projects__project
+        @include flex(center, center,column)
+        width: 100%
+        min-height: 220px
+        background-color: $font-color 
+        &:nth-of-type(1)
+        @include pictureJpg(brows)
+        
+        .projects__title
+            @include flex(center, center,column)
+            margin: 0 auto 20% auto
+            .projects__h3
+                color: $bgc-color
+                font-weight: bold
+                font-family: $family-raleway
+                font-size: 1em
+            .projects__tech-title 
+                color: $bright-color
+                font-family: $family-raleway
+                font-size: 0.8em
+                
+        .projects__learn-more
+            @include flex(center, center, row)
+            @include button-style
+    

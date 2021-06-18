@@ -4,15 +4,9 @@
     flex-wrap: wrap
     flex-grow: 1
     .about__header
-        @include flex(center, center, row)
-        height: 10em
-        width: 100%
+        @include h2-wrapper
         .about__h2
-            font-size: 33px
-            font-family: $family-raleway
-            text-transform: uppercase
-            font-weight: bold
-            color: $font-bgc
+            @include h2-style
     .about__wrap
         @include flex(center,center,row)
         flex-wrap: wrap
