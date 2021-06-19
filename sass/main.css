@@ -48,10 +48,53 @@ body .indexWrapper {
 }
 
 .nav .nav__menu {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #2d2e38;
+  position: absolute;
+  bottom: -40%;
+  left: 0;
+  height: 30%;
   width: 100%;
-  height: 100%;
-  z-index: 4;
+  z-index: 6;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.nav .nav__menu .nav__wrap .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
+}
+
+.nav .nav__menu .nav__wrap .nav__list .nav__item {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  margin: 10px 0 0 25px;
 }
 
 .front {
@@ -781,5 +824,10 @@ body .indexWrapper {
   font-size: 12px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+}
+
+.enable {
+  height: 30%;
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */
