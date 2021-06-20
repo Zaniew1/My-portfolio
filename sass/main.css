@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
@@ -17,7 +18,20 @@ body .indexWrapper {
   height: 100%;
 }
 
-.nav {
+.nav .nav__bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2d2e38;
+  height: 10vh;
+  border-bottom: 4px solid #66fcf1;
+  z-index: 100;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.nav .nav__bar .nav__toggle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,70 +45,77 @@ body .indexWrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #2d2e38;
-  height: 10vh;
-  border-bottom: 4px solid #66fcf1;
-  z-index: 2;
+  height: 100%;
+  padding: 0 20px;
+  color: #c5c6c7;
+  cursor: pointer;
 }
 
-.nav .nav__bar {
-  font-size: 22px;
-  margin: 0 30px;
-  color: #fff;
+.nav .nav__bar .nav__toggle::before {
+  content: 'Menu';
+  padding: 0 10px;
 }
 
-.nav .nav__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #2d2e38;
+.nav .nav__bar .nav__toggle .nav__span {
+  position: relative;
+  width: 20px;
+  height: 50px;
+}
+
+.nav .nav__bar .nav__toggle .nav__span::before {
+  content: '';
   position: absolute;
-  bottom: -40%;
+  top: 20px;
   left: 0;
-  height: 30%;
-  width: 100%;
-  z-index: 6;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  opacity: 1;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
-.nav .nav__menu .nav__wrap .nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  list-style-type: none;
+.nav .nav__bar .nav__toggle .nav__span::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
-.nav .nav__menu .nav__wrap .nav__list .nav__item {
+.nav .nav__bar .nav__toggle .nav__list {
+  background-color: #2d2e38;
+  position: relative;
+}
+
+.nav .nav__bar .nav__toggle .nav__list .nav__item {
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-size: 1em;
   margin: 10px 0 0 25px;
+}
+
+.nav .nav__bar .nav__toggle--active::before {
+  content: 'Close';
+}
+
+.nav .nav__bar .nav__toggle--active .nav__span::before {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  top: 24px;
+}
+
+.nav .nav__bar .nav__toggle--active .nav__span::after {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  bottom: 24px;
 }
 
 .front {

@@ -1,36 +1,67 @@
 .nav
-    @include flex (flex-end, center, row)
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    background-color: #2d2e38
-    height: 10vh
-    border-bottom: 4px solid $bright-color
-    z-index: 2
-    .nav__bar
-        font-size: 22px
-        margin: 0 30px
-        color: $white-color
-        .nav__bar-icon
-    .nav__menu
-        @include flex(flex-start, flex-start, column)
-        background-color: #2d2e38
-        position: absolute
-        bottom: -40%
+    .nav__bar 
+        position: fixed
+        top: 0
         left: 0
-        height: 30%
         width: 100%
-        z-index: 6
-        transition:  0.3s ease-in-out
-        opacity: 1
-        .nav__wrap
+        background-color: #2d2e38
+        height: 10vh
+        border-bottom: 4px solid $bright-color
+        z-index: 100
+        transition: 0.4s ease-in-out
+        .nav__toggle
+            @include flex(flex-end, center, row)
+            position: relative
+            top: 0 
+            left: 0
+            width: 100%
+            height: 100%
+            padding: 0 20px
+            color: $font-color
+            cursor: pointer
+            &::before
+                content: 'Menu'
+                padding: 0 10px
+            .nav__span
+                position: relative
+                width: 20px 
+                height: 50px
+                &::before
+                    content: ''
+                    position: absolute
+                    top: 20px
+                    left: 0
+                    width: 20px
+                    height: 2px
+                    background-color: $white-color
+                    transition: 0.4s ease-in-out
+                &::after
+                    content: ''
+                    position: absolute
+                    bottom: 20px
+                    left: 0
+                    width: 20px
+                    height: 2px
+                    background-color: $white-color
+                    transition: 0.4s ease-in-out
 
             .nav__list
-                @include flex(center, flex-start, column)
-                list-style-type: none
+                background-color: #2d2e38
+                position: relative
                 .nav__item
                     color: $white-color
                     font-family: $family-raleway
                     font-size: 1em
                     margin: 10px 0 0 25px
+                    .nav__link
+
+        .nav__toggle--active
+            &::before
+                content: 'Close'
+            .nav__span
+                &::before
+                    transform: rotate(225deg)
+                    top: 24px
+                &::after
+                    transform: rotate(135deg)
+                    bottom: 24px
