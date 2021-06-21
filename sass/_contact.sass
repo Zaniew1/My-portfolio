@@ -5,7 +5,10 @@
         @include h2-wrapper
         .contact__h2
             @include h2-style
-            color: 
+            color: $white-color
+            &::after
+                @include h2-after
+                background-color: $white-color
     .contact__wrap
         .contact__form
             @include flex(center,center,column)
@@ -33,7 +36,11 @@
                 padding: 10px 10px
                 color: $bright-color
                 resize: vertical
+                min-height: 100px
             .contact__submit
                 @include button-style
                 
                 margin: 20px auto 50px auto
+                &:hover
+                    background-color: $bright-color
+                    border: none

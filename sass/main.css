@@ -228,6 +228,11 @@ body .indexWrapper {
   transition: .3s ease-in-out;
 }
 
+.front .front__text .front__button:hover {
+  background-color: #66fcf1;
+  border: none;
+}
+
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,7 +278,20 @@ body .indexWrapper {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  color: #616161;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.about .about__header .about__h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 80px;
+  height: 3px;
+  background-color: #616161;
 }
 
 .about .about__wrap {
@@ -550,7 +568,22 @@ body .indexWrapper {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  color: #616161;
+  position: relative;
+  padding-bottom: 15px;
+  color: #fff;
+}
+
+.contact .contact__header .contact__h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 80px;
+  height: 3px;
+  background-color: #616161;
+  background-color: #fff;
 }
 
 .contact .contact__wrap .contact__form {
@@ -596,6 +629,7 @@ body .indexWrapper {
   padding: 10px 10px;
   color: #66fcf1;
   resize: vertical;
+  min-height: 100px;
 }
 
 .contact .contact__wrap .contact__form .contact__submit {
@@ -610,6 +644,11 @@ body .indexWrapper {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   margin: 20px auto 50px auto;
+}
+
+.contact .contact__wrap .contact__form .contact__submit:hover {
+  background-color: #66fcf1;
+  border: none;
 }
 
 .footer {
@@ -657,14 +696,28 @@ body .indexWrapper {
   min-width: 40px;
   min-height: 50px;
   scroll-behavior: auto;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.footer .footer__go-up:hover {
+  background-color: #44dad0;
+}
+
+.footer .footer__go-up:hover .footer__go-up-icon {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .footer .footer__go-up .footer__go-up-icon {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   color: #fff;
   font-size: 28px;
 }
 
-.footer .footer__wrapper {
+.footer .footer__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -681,7 +734,7 @@ body .indexWrapper {
   min-height: 8em;
 }
 
-.footer .footer__wrapper .footer__social {
+.footer .footer__list .footer__social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -701,7 +754,14 @@ body .indexWrapper {
   z-index: 4;
 }
 
-.footer .footer__wrapper .footer__social .footer__icon {
+.footer .footer__list .footer__social:hover .footer__icon {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.footer .footer__list .footer__social .footer__icon {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   font-size: 24px;
   color: #fff;
 }
@@ -756,7 +816,20 @@ body .indexWrapper {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  color: #616161;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.projects .projects__header .projects__h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 80px;
+  height: 3px;
+  background-color: #616161;
 }
 
 .projects .projects__search {

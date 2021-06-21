@@ -22,7 +22,18 @@
     font-family: $family-raleway
     text-transform: uppercase
     font-weight: bold
-    color: $font-bgc
+    color: 
+    position: relative
+    padding-bottom: 15px
+@mixin h2-after
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50% , 0)
+    width: 80px
+    height: 3px
+    background-color: $font-bgc
 @mixin button-style
     width: 50%
     height: 40px
@@ -33,6 +44,7 @@
     font-family: $family-raleway
     font-size: 12px
     transition: .3s ease-in-out
+    
 @mixin pictureJpg ($picture)
     background-image: url("../img/#{$picture}.jpg")
     background-position: center
