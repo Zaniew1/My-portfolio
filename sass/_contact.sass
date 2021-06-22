@@ -16,27 +16,37 @@
                 font-family: $family-raleway
                 color: $bright-color
                 font-size: 11px
+                padding-bottom: 10px
             .contact__input
                 background-color: $font-bgc
                 width: 90%
                 min-height: 40px
                 margin: 10px auto
-                border: 1px solid $bright-color
+                outline: none
+                border: none
                 font-family: $family-raleway
                 padding: 10px 10px
-                &:focus 
+                color: $bright-color
+                &:focus
+                    border: 1px solid $bright-color
+                &::placeholder
+                    color: #fff 
             .contact__text
                 background-color: $font-bgc
                 font-family: $family-raleway
                 margin: 10px 5%
                 width: 90%
                 height: 200px
-                border: 1px solid $bright-color
+                border: none
                 outline: none
                 padding: 10px 10px
                 color: $bright-color
                 resize: vertical
                 min-height: 100px
+                &:focus
+                    border: 1px solid $bright-color
+                &::placeholder
+                    color: #fff 
             .contact__submit
                 @include button-style
                 

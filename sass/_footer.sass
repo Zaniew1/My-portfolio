@@ -30,14 +30,17 @@
         width: 100%
         min-height: 8em
         .footer__social
-            @include flex(center, center, row)
+            position: relative
             width: 3.5em
             height: 3.5em
             background-color: #2d2e38
             z-index: 4
             &:hover .footer__icon
-                transform: translateY(-5px)
+                font-size: 32px
+                color: $bright-color
+            
             .footer__icon
+                @include position-center
                 transition: 0.2s ease-in-out
                 font-size: 24px
                 color: $white-color

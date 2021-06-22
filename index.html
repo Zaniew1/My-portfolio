@@ -29,11 +29,11 @@
                 <div class="nav__toggle"><span class="nav__span"> </span></div>
                 
                 <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="#home">Strona Główna </a></li>
-                    <li class="nav__item"><a class="nav__link" href="#about">O mnie</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#tech">Technologie</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#projects">Projekty</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#contact">Kontakt</a></li>
+                    <li class="nav__item"><a id="home" class="nav__link" href="#home">Strona Główna </a></li>
+                    <li class="nav__item"><a id="about" class="nav__link" href="#about">O mnie</a></li>
+                    <li class="nav__item"><a id="tech" class="nav__link" href="#tech">Technologie</a></li>
+                    <li class="nav__item"><a id="projects" class="nav__link" href="#projects">Projekty</a></li>
+                    <li class="nav__item"><a id="contact" class="nav__link" href="#contact">Kontakt</a></li>
                 </ul>
             </div>
         </nav>
@@ -43,7 +43,7 @@
 
 
 
-        <section id="home" class="front">
+        <section  class="front">
             <div class="front__face">
 
             </div>
@@ -62,7 +62,7 @@
 
 
 
-        <section id="about" class="about">
+        <section  class="about">
             <div class="about__header">
                 <h2 class="about__h2">O mnie</h2>
             </div>
@@ -105,14 +105,15 @@
                     </p>
                 </div>
             </div>
+        </section>
+        <section class="tech">
             
-
         </section>
 
 
                 <!-- SEKCJA projects -->
 
-        <section id="projects" class="projects">
+        <section  class="projects">
             <div class="projects__header">
                 <h2 class="projects__h2">Projekty</h2>
             </div>
@@ -145,13 +146,13 @@
 
  
 
-        <section id="contact" class="contact">
+        <section class="contact">
             <div class="contact__header">
                 <h2 class="contact__h2">Kontakt</h2>
             </div>
             <div class="contact__wrap">
                 <form class="contact__form" action="https://formsubmit.co/m.zaniewski1995@gmail.com" method="POST" >     
-                    <h1 class="contact__form-header">Jeżeli masz jakieś pytania, napisz do mnie</h1>
+                    <h2 class="contact__form-header">Jeżeli masz jakieś pytania, napisz do mnie</h2>
                     <input class="contact__input"  name ="Imię" type="text" placeholder="Imię" onfocus="this.placeholder=''" onblur="this.placeholder='Imię' " required>
                     <input type="hidden" name="_subject" value="Masz nową wiadomość od klientki!">
                     <input type="hidden" name="_captcha" value="false">
