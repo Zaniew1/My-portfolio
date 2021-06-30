@@ -130,22 +130,20 @@ body .indexWrapper {
   height: 50px;
   color: #c5c6c7;
   font-size: 1em;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
-.nav .nav__bar .nav__list .nav__item .nav__link:hover {
+.nav .nav__bar .nav__list .nav__item .nav__link:focus {
   -webkit-transition: 0s;
   transition: 0s;
   color: #66fcf1;
 }
 
-.nav .nav__bar .nav__list .nav__item:nth-of-type(1) {
-  color: #66fcf1;
-}
-
 .nav .nav__bar .nav__list .nav__item .color {
   color: #66fcf1;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .nav .nav__bar--active {
