@@ -746,7 +746,9 @@ body .indexWrapper {
 }
 
 .projects {
-  margin: 10% auto 30% auto;
+  margin: 10% auto 0% auto;
+  padding-bottom: 30%;
+  background-color: #f5f5f5;
 }
 
 .projects .projects__header {
@@ -825,6 +827,33 @@ body .indexWrapper {
   color: #616161;
 }
 
+.projects .projects__search .projects__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 0;
+  height: 0;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+}
+
+.projects .projects__search .red {
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  background-color: #45a29e;
+}
+
 .projects .projects__project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -839,12 +868,31 @@ body .indexWrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   width: 100%;
+  height: 100%;
   min-height: 220px;
-  background-color: #c5c6c7;
+  overflow: hidden;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
   background-image: url("../img/brows.jpg");
   background-position: center;
   background-size: cover;
+}
+
+.projects .projects__project:hover {
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  background-image: none;
+  background-color: #f5f5f5;
+}
+
+.projects .projects__project:hover .projects__title {
+  top: 20%;
+}
+
+.projects .projects__project:hover .projects__learn-more {
+  top: 60%;
 }
 
 .projects .projects__project .projects__title {
@@ -861,7 +909,14 @@ body .indexWrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin: 0 auto 20% auto;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .projects .projects__project .projects__title .projects__h3 {
@@ -872,7 +927,7 @@ body .indexWrapper {
 }
 
 .projects .projects__project .projects__title .projects__tech-title {
-  color: #66fcf1;
+  color: #45a29e;
   font-family: "Raleway", sans-serif;
   font-size: 0.8em;
 }
@@ -901,9 +956,15 @@ body .indexWrapper {
   font-size: 12px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
-}
-
-.color {
-  color: #66fcf1;
+  font-size: 14px;
+  color: #45a29e;
+  border: 1px solid #45a29e;
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 /*# sourceMappingURL=main.css.map */

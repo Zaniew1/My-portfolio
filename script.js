@@ -113,3 +113,37 @@ navToggle.addEventListener("click", ()=>{
             }
     }
     document.addEventListener('scroll', colorNavChange);            // wywołanie na scrollu
+
+
+
+
+    const allProjects = document.querySelector('.projects__name--one')
+    const htmlCssProjects = document.querySelector('.projects__name--two')
+    const jsProjects = document.querySelector('.projects__name--three')
+    const reactProjects = document.querySelector('.projects__name--four')
+    const removeRedColor = ()=>{
+        allProjects.classList.remove('red');
+        htmlCssProjects.classList.remove('red');
+        jsProjects.classList.remove('red');
+        reactProjects.classList.remove('red');
+    }
+
+    allProjects.addEventListener('click' , () => {
+        removeRedColor();
+        allProjects.classList.add('red');
+    })
+
+    htmlCssProjects.addEventListener('click' , () => {
+        removeRedColor();
+        htmlCssProjects.classList.add('red');
+    })
+    
+    jsProjects.addEventListener('click' , () => {
+        removeRedColor();
+        jsProjects.classList.add('red');
+    })
+
+    reactProjects.addEventListener('click' , () => {
+        removeRedColor();
+        reactProjects.classList.add('red');
+    })
