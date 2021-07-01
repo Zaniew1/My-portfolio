@@ -147,3 +147,46 @@ navToggle.addEventListener("click", ()=>{
         removeRedColor();
         reactProjects.classList.add('red');
     })
+
+
+document.querySelector('.projects__learn-more--one').addEventListener('click', ()=>{
+    document.querySelector('.project__full').classList.remove('displayNone')
+})
+
+document.querySelector('.project__close').addEventListener('click', ()=> {
+    document.querySelector('.project__full').classList.add('displayNone')
+})
+
+
+const slideList = [{
+    img: "img/brows.jpg",
+   },
+   {
+    img: "img/brows1.jpg",
+   },
+   {
+    img: "img/brows2.jpg",
+   }];
+let active = 0;
+const sliderPicture = document.querySelector('.project__slider');
+const leftArrow = document.querySelector('.project__arrow-icon--left');
+const rightArrow = document.querySelector('.project__arrow-icon--right');
+const changeSlideRight = ()=>{
+    active++;
+    
+    if(active === firstSlider.length){
+        active = 0;
+    }
+    sliderPicture.src = slideList[active].img
+}
+const changeSlideLeft = ()=>{
+    active--;
+    if(active === 0){
+        active = firstSlider.length;
+    }
+    sliderPicture.src = slideList[active].img
+}
+console.log(slideList)
+console.log(sliderPicture)
+leftArrow.addEventListener('click', changeSlideLeft)
+leftArrow.addEventListener('click', changeSlideRight)

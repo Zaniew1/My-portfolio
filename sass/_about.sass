@@ -44,13 +44,6 @@
     .about__wrapper
         @include flex(center,center,column)
         width: 90%
-        .about__me
-            @include flex(center,center,row)
-            @include pictureJpg(me)
-            flex-wrap: wrap
-            width: 60vw
-            height: 60vw
-            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0)
         .about__text-wrap
             @include flex(center,center,column)
             margin: 10px auto
