@@ -31,9 +31,8 @@ $breakpoints: (
         @if $type == max {
             $width: $width - 1px;
         }
-        @media only screen and (orientation: landscape) and (#{$type}-width: $width) 
-        {
-            @content
+        @media only screen and (orientation: landscape) and (#{$type}-width: $width) {
+            @content;
         }
     }
 }

@@ -14,7 +14,7 @@ body {
   height: 100vh;
 }
 
-body .indexWrapper {
+body .main {
   width: 100%;
   height: 100%;
 }
@@ -34,6 +34,12 @@ body .indexWrapper {
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   overflow: hidden;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .nav .nav__bar {
+    height: 60px;
+  }
 }
 
 .nav .nav__bar .nav__toggle {
@@ -66,6 +72,12 @@ body .indexWrapper {
   padding: 0 10px;
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .nav .nav__bar .nav__toggle::before {
+    display: none;
+  }
+}
+
 .nav .nav__bar .nav__toggle .nav__span {
   position: relative;
   width: 20px;
@@ -84,6 +96,12 @@ body .indexWrapper {
   transition: 0.4s ease-in-out;
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .nav .nav__bar .nav__toggle .nav__span::before {
+    display: none;
+  }
+}
+
 .nav .nav__bar .nav__toggle .nav__span::after {
   content: '';
   position: absolute;
@@ -94,6 +112,12 @@ body .indexWrapper {
   background-color: #fff;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .nav .nav__bar .nav__toggle .nav__span::after {
+    display: none;
+  }
 }
 
 .nav .nav__bar .nav__toggle--active::before {
@@ -117,6 +141,32 @@ body .indexWrapper {
   background-color: #2d2e38;
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .nav .nav__bar .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border-bottom: 3px solid #66fcf1;
+  }
+}
+
 .nav .nav__bar .nav__list .nav__item {
   list-style-type: none;
   color: #c5c6c7;
@@ -132,6 +182,12 @@ body .indexWrapper {
   font-size: 1em;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .nav .nav__bar .nav__list .nav__item .nav__link {
+    margin: 10px 15px 0 0;
+  }
 }
 
 .nav .nav__bar .nav__list .nav__item .nav__link:focus {
@@ -184,6 +240,14 @@ body .indexWrapper {
   background-size: cover;
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .front .front__face {
+    width: 30vw;
+    height: 30vw;
+    margin: 60px auto;
+  }
+}
+
 .front .front__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,6 +273,12 @@ body .indexWrapper {
   color: #fff;
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .front .front__text .front__text-h1 {
+    font-size: 26px;
+  }
+}
+
 .front .front__text .front__text-h1 .front__span {
   color: #66fcf1;
 }
@@ -219,7 +289,13 @@ body .indexWrapper {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   color: #fff;
-  margin: 0 auto 5vh auto;
+  margin: 0 auto 5vh;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .front .front__text .front__text-h2 {
+    font-size: 18px;
+  }
 }
 
 .front .front__text .front__button {
@@ -233,6 +309,15 @@ body .indexWrapper {
   font-size: 12px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .front .front__text .front__button {
+    width: 30vw;
+    height: 3em;
+    font-size: 16px;
+    border: 1px solid #fff;
+  }
 }
 
 .front .front__text .front__button:hover {
@@ -255,6 +340,7 @@ body .indexWrapper {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  height: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-flex: 1;
@@ -280,6 +366,12 @@ body .indexWrapper {
   width: 100%;
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__header {
+    height: 16em;
+  }
+}
+
 .about .about__header .about__h2 {
   font-size: 33px;
   font-family: "Raleway", sans-serif;
@@ -287,6 +379,12 @@ body .indexWrapper {
   font-weight: bold;
   position: relative;
   padding-bottom: 15px;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__header .about__h2 {
+    font-size: 42px;
+  }
 }
 
 .about .about__header .about__h2::after {
@@ -299,6 +397,20 @@ body .indexWrapper {
   width: 80px;
   height: 3px;
   background-color: #616161;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__header .about__h2::after {
+    width: 120px;
+    height: 5px;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__header .about__h2::after {
+    width: 100px;
+    height: 5px;
+  }
 }
 
 .about .about__wrap {
@@ -339,6 +451,12 @@ body .indexWrapper {
   margin: 0 auto;
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__wrap .about__pros {
+    height: 17em;
+  }
+}
+
 .about .about__wrap .about__pros .about__six-angles {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,9 +478,22 @@ body .indexWrapper {
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__wrap .about__pros .about__six-angles {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 .about .about__wrap .about__pros .about__six-angles .about__six-angles-icon {
   color: #fff;
   font-size: 30px;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__wrap .about__pros .about__six-angles .about__six-angles-icon {
+    font-size: 42px;
+  }
 }
 
 .about .about__wrap .about__pros .about__caption {
@@ -373,12 +504,24 @@ body .indexWrapper {
   color: #616161;
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__wrap .about__pros .about__caption {
+    font-size: 24px;
+  }
+}
+
 .about .about__wrap .about__pros .about__description {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 11px;
   text-align: center;
   color: #616161;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__wrap .about__pros .about__description {
+    font-size: 16px;
+  }
 }
 
 .about .about__wrapper {
@@ -423,15 +566,25 @@ body .indexWrapper {
   margin: 10px auto;
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__wrapper .about__text-wrap .about__me-header {
+    font-size: 28px;
+  }
+}
+
 .about .about__wrapper .about__text-wrap .about__me-description {
   font-family: "Raleway", sans-serif;
   font-size: 11px;
   text-align: center;
   color: #616161;
+  padding: 0 15px;
 }
 
-.tech {
-  height: 50vh;
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__wrapper .about__text-wrap .about__me-description {
+    font-size: 16px;
+    padding: 0 60px;
+  }
 }
 
 .contact {
@@ -458,6 +611,12 @@ body .indexWrapper {
   width: 100%;
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .contact .contact__header {
+    height: 16em;
+  }
+}
+
 .contact .contact__header .contact__h2 {
   font-size: 33px;
   font-family: "Raleway", sans-serif;
@@ -466,6 +625,12 @@ body .indexWrapper {
   position: relative;
   padding-bottom: 15px;
   color: #fff;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .contact .contact__header .contact__h2 {
+    font-size: 42px;
+  }
 }
 
 .contact .contact__header .contact__h2::after {
@@ -479,6 +644,13 @@ body .indexWrapper {
   height: 3px;
   background-color: #616161;
   background-color: #fff;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .contact .contact__header .contact__h2::after {
+    width: 120px;
+    height: 5px;
+  }
 }
 
 .contact .contact__wrap .contact__form {
@@ -744,6 +916,12 @@ body .indexWrapper {
   width: 100%;
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .projects .projects__header {
+    height: 16em;
+  }
+}
+
 .projects .projects__header .projects__h2 {
   font-size: 33px;
   font-family: "Raleway", sans-serif;
@@ -751,6 +929,12 @@ body .indexWrapper {
   font-weight: bold;
   position: relative;
   padding-bottom: 15px;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .projects .projects__header .projects__h2 {
+    font-size: 42px;
+  }
 }
 
 .projects .projects__header .projects__h2::after {
@@ -763,6 +947,13 @@ body .indexWrapper {
   width: 80px;
   height: 3px;
   background-color: #616161;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .projects .projects__header .projects__h2::after {
+    width: 120px;
+    height: 5px;
+  }
 }
 
 .projects .projects__search {

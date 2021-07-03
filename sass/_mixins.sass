@@ -17,6 +17,8 @@
     @include flex(center, center, row)
     height: 10em
     width: 100%
+    @include mq(tablet)
+        height: 16em
 @mixin h2-style
     font-size: 33px
     font-family: $family-raleway
@@ -25,6 +27,8 @@
     color: 
     position: relative
     padding-bottom: 15px
+    @include mq(tablet)
+        font-size: 42px
 @mixin h2-after
     content: ""
     position: absolute
@@ -34,6 +38,9 @@
     width: 80px
     height: 3px
     background-color: $font-bgc
+    @include mq(tablet)
+        width: 120px
+        height: 5px
 @mixin button-style
     width: 50%
     height: 40px
