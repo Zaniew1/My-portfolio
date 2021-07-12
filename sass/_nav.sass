@@ -11,7 +11,7 @@
         transition: 0.4s ease-in-out
         overflow: hidden
         @include mq(tablet)
-            height: 60px
+            height: 0px
         .nav__toggle
             @include flex(flex-end, center, row)
             position: relative
@@ -95,10 +95,10 @@
                         color: $bright-color
                     &:first-child
                         
-                   
-                        
-                .color
+                .nav__link--color
                     color: $bright-color
                     transition: 0.4s ease-in-out
     .nav__bar--active
-        height: 300px
+        height: 250px
+    .nav__bar--sticky-big-screen
+        height: 60px

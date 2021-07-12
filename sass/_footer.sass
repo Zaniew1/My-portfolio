@@ -29,6 +29,8 @@
         @include flex(space-around, flex-end, row)
         width: 100%
         min-height: 8em
+        @include mq(tablet)
+            width: 50%
         .footer__social
             position: relative
             width: 3.5em
@@ -50,4 +52,4 @@
         height: 5em
         .footer__text
             font-family: $family-raleway
-            color: $font-bgc
+            color: $bright-color

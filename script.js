@@ -49,24 +49,24 @@ navToggle.addEventListener("click", ()=>{
                 },6 ); 
             }
             
-            lookMyProjects.addEventListener('click', ()=>{              //funkcja scrollująca do projektów po naciśnięciu buttona "zobacz moje projekty"
-                const scrollTo = window.setInterval(function(){
-                    window.scrollTo( 0, projectsPosition - 20 ); 
-                    window.clearInterval( scrollTo );          
-                },6 ); 
-            })
-
-            goUpButton.addEventListener('click', ()=>{                      //funkcja scrollująca do projektów po naciśnięciu buttona - strzałka do góry
-                const scrollTo = window.setInterval(function(){
-                    window.scrollTo( 0, topPosition - 20 ); 
-                    window.clearInterval( scrollTo );
-                },6 ); 
-                })
+           
 
             removeNav();        // funkcja chowająca nawigację po naciśnięciu jakiegokolwiek linka 
         })
     })
+    lookMyProjects.addEventListener('click', ()=>{              //funkcja scrollująca do projektów po naciśnięciu buttona "zobacz moje projekty"
+        const scrollTo = window.setInterval(function(){
+            window.scrollTo( 0, projectsPosition - 20 ); 
+            window.clearInterval( scrollTo );          
+        },6 ); 
+    })
 
+    goUpButton.addEventListener('click', ()=>{                      //funkcja scrollująca do projektów po naciśnięciu buttona - strzałka do góry
+        const scrollTo = window.setInterval(function(){
+            window.scrollTo( 0, homePosition - 20 ); 
+            window.clearInterval( scrollTo );
+        },6 ); 
+        })
 
 
     const homeLink = document.getElementById('home')        //przyciski navigacji w małych rozdzielczościach 
@@ -75,10 +75,10 @@ navToggle.addEventListener("click", ()=>{
     const contactLink = document.getElementById('contact')
 
     const colorNavRemove = ()=>{                    //funkcja zabierająca jasny kolor z linków w navigacji na małych rozdzielczościach
-        homeLink.classList.remove('color');
-        aboutLink.classList.remove('color');
-        projectsLink.classList.remove('color');
-        contactLink.classList.remove('color');
+        homeLink.classList.remove('nav__link--color');
+        aboutLink.classList.remove('nav__link--color');
+        projectsLink.classList.remove('nav__link--color');
+        contactLink.classList.remove('nav__link--color');
     }
 
     const colorNavChange = ()=>{            // funkcja dająca kolor linkom w nawigacji zależnie od miejsca w którym jesteśmy na stronie 
@@ -86,16 +86,16 @@ navToggle.addEventListener("click", ()=>{
         const navHeight = document.querySelector('.nav__bar').clientHeight;     // wysokość nav baru 
             if(topPosition <= (aboutPosition - navHeight)){         // jeżeli górna krawędź ekranu jest między górą dokumentu a miejscem w którym się zaczyna sekcja about (minus wysokość navbaru)
                 colorNavRemove();                                   // przed każdym nadaniem koloru danemu linkowi, zerujemy wszystkie linki, aby nie było dwóch naraz 
-                homeLink.classList.add('color');
+                homeLink.classList.add('nav__link--color');
             } else if(topPosition <= (projectsPosition- navHeight)){
                 colorNavRemove();
-               aboutLink.classList.add('color');
+               aboutLink.classList.add('nav__link--color');
             } else if(topPosition <= (contactPosition - navHeight)){
                 colorNavRemove();
-                projectsLink.classList.add('color');
+                projectsLink.classList.add('nav__link--color');
             } else {
                 colorNavRemove();
-                contactLink.classList.add('color');
+                contactLink.classList.add('nav__link--color');
             }
     }
     document.addEventListener('scroll', colorNavChange);            // wywołanie na scrollu
@@ -108,39 +108,39 @@ navToggle.addEventListener("click", ()=>{
     const jsProjects = document.querySelector('.projects__name--three')
     const reactProjects = document.querySelector('.projects__name--four')
     const removeRedColor = ()=>{
-        allProjects.classList.remove('red');
-        htmlCssProjects.classList.remove('red');
-        jsProjects.classList.remove('red');
-        reactProjects.classList.remove('red');
+        allProjects.classList.remove('projects__name--active-color');
+        htmlCssProjects.classList.remove('projects__name--active-color');
+        jsProjects.classList.remove('projects__name--active-color');
+        reactProjects.classList.remove('projects__name--active-color');
     }
 
     allProjects.addEventListener('click' , () => {
         removeRedColor();
-        allProjects.classList.add('red');
+        allProjects.classList.add('projects__name--active-color');
     })
 
     htmlCssProjects.addEventListener('click' , () => {
         removeRedColor();
-        htmlCssProjects.classList.add('red');
+        htmlCssProjects.classList.add('projects__name--active-color');
     })
     
     jsProjects.addEventListener('click' , () => {
         removeRedColor();
-        jsProjects.classList.add('red');
+        jsProjects.classList.add('projects__name--active-color');
     })
 
     reactProjects.addEventListener('click' , () => {
         removeRedColor();
-        reactProjects.classList.add('red');
+        reactProjects.classList.add('projects__name--active-color');
     })
 
 
 document.querySelector('.projects__learn-more--one').addEventListener('click', ()=>{
-    document.querySelector('.project__full').classList.remove('displayNone')
+    document.querySelector('.project__full').classList.remove('project__full--display-none')
 })
 
 document.querySelector('.project__close').addEventListener('click', ()=> {
-    document.querySelector('.project__full').classList.add('displayNone')
+    document.querySelector('.project__full').classList.add('.project__full--display-none')
 })
 
 
@@ -176,3 +176,21 @@ const changeSlideLeft = ()=>{
 // console.log(sliderPicture)
 leftArrow.addEventListener('click', changeSlideLeft)
 leftArrow.addEventListener('click', changeSlideRight)
+
+
+
+window.addEventListener("scroll", () =>{
+    if(window.innerWidth >= 768 && window.innerHeight >= 500)
+    {                                                                           // kod rozwijający małe menu po scrollu użytkownika 
+        if(window.pageYOffset >= 1 )                                            // włącz po najmniejszym scrollu 
+        {
+            document.querySelector('.nav__bar').classList.add('nav__bar--sticky-big-screen')
+        }
+        else                                                                           // wyłącz kiedy jest na górze
+        {
+            document.querySelector('.nav__bar').classList.remove('nav__bar--sticky-big-screen')
+    
+
+        }
+    }
+})

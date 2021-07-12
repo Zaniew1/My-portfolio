@@ -1,6 +1,9 @@
 .contact
     @include picturePng(dark)
- 
+    @include mq(tablet)
+        height:  80%
+    @include mq (tablet-wide)
+        height: 85%
     .contact__header
         @include h2-wrapper
         .contact__h2
@@ -17,6 +20,10 @@
                 color: $bright-color
                 font-size: 11px
                 padding-bottom: 10px
+                @include mq(tablet)
+                    font-size: 14px
+                @include mq (tablet-wide)
+                    font-size: 16px
             .contact__input
                 background-color: $font-bgc
                 width: 90%
@@ -27,10 +34,19 @@
                 font-family: $family-raleway
                 padding: 10px 10px
                 color: $bright-color
+                @include mq(tablet)
+                    width: 60%
+                    min-height: 50px 
+                @include mq (tablet-wide)
+                    width: 50%
+                    min-height: 60px
                 &:focus
                     border: 1px solid $bright-color
                 &::placeholder
-                    color: #fff 
+                    color: #fff
+                    @include mq(tablet)
+                        font-size: 16px
+                    
             .contact__text
                 background-color: $font-bgc
                 font-family: $family-raleway
@@ -43,14 +59,22 @@
                 color: $bright-color
                 resize: vertical
                 min-height: 100px
+                @include mq(tablet)
+                    width: 60%
+                    min-height: 220px
+                @include mq (tablet-wide)
+                    width: 50%
+                    min-height: 340px
                 &:focus
                     border: 1px solid $bright-color
                 &::placeholder
-                    color: #fff 
+                    color: #fff
+                    @include mq(tablet)
+                        font-size: 16px 
             .contact__submit
                 @include button-style
-                
                 margin: 20px auto 50px auto
+                
                 &:hover
                     background-color: $bright-color
                     border: none

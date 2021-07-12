@@ -12,157 +12,177 @@
         @include flex(space-around, center, row)
         
         width: 95%
-        margin: 2em auto
+        margin: 2em auto 4em auto
         .projects__technology
             @include flex(center, center, row)
             width: 25%
             height: 2.4em
             font-size: 0.7em
+            font-weight: bold
+            text-transform: uppercase
             color: $font-bgc
+            @include mq(tablet)
+                font-size: 0.9em
         .projects__name
             @include flex(center, center, row)
             width: 0
             height: 0
             transition: 0.4s ease-in
-        .red
+        .projects__name--active-color
             color: $white-color
             height: 100% 
             width: 100%
             background-color: $tone-color
-    .projects__project
-        @include flex(center, center,column)
-        position: relative
-        width: 100%
-        height: 100%
-        min-height: 220px
-        overflow: hidden
+            
+    .projects__wrapp
+        @include flex(center, center, column)
+        width: 95%
+        margin: 0 auto
         transition: 0.4s ease-in-out
-        @include pictureJpg(brows)
-        &:hover
-            transition: 0.4s ease-in-out
-            background-image: none
-            background-color: #f5f5f5
-        &:hover .projects__title
-            top: 20%
-        &:hover .projects__learn-more
-            top: 60%
-        .projects__title
-            @include flex(center, center,column)
-            position: absolute
-            top: -30%
-            left: 50%
-            transform: translate(-50%, -50%)
-            margin: 0 auto 20% auto
-            transition: 0.5s ease-in-out
-            .projects__h3
-                color: $bgc-color
-                font-weight: bold
-                font-family: $family-raleway
-                font-size: 1em
-            .projects__tech-title
-                
-                color: $tone-color
-                font-family: $family-raleway
-                font-size: 0.8em
-                
-        .projects__learn-more
+        @include mq(tablet)
+            @include flex(center, center, row)       
+        .projects__project
             @include flex(center, center, row)
-            @include button-style
-            font-size: 14px
-            color: $tone-color
-            border: 1px solid $tone-color
-            position: absolute
-            top: 140%
-            left: 50%
-            transform: translate(-50%, -50%)
-            transition: 0.5s ease-in-out
-    .project__full
-        position: fixed 
-        top: 0
-        left: 0 
-        width: 100%
-        height: 100%
-        background-color: #fff
-        z-index: 999
-        transition: 0.2s linear
-        .project__pictures
             position: relative
             width: 100%
-            height: 50%
-            .project__slider
-                width: 100%
-                height: 100%
-            .project__arrow
-                position: absolute
-                width: 2.8em
-                height: 2.8em
-                background-color: #000
-                opacity: 0.4
-                transition: 0.2s ease-in
-
-                &:nth-of-type(1)
-                    bottom: 0
-                    left: 0
-                &:nth-of-type(2)
-                    bottom: 0 
-                    right: 0
-                &:hover
-                    background-color: $tone-color
-                .project__arrow-icon
-                    @include position-center
-                    color: #fff
-                    font-size: 18px
-                    transition: 0.2s ease-in-out
-        .project__description
-            width: 100%
-            height: 50%
-            @include flex(flex-start, flex-start,column)
-            padding: 20px 0 0 15px
-            .project__page
-                font-size: 20px
-                letter-spacing: 1px
-            .project__header
-                color: $font-color
-                font-size: 0.8em
-                letter-spacing: 1px
-                padding-top: 5px
-                &::after
-                    content: ''
-                    display: block
-                    width: 128%
-                    height: 2px
-                    border-bottom: 1px solid $font-color
-                    padding: 10px
-            .project__text
-                color: $bgc-color
-                font-size: 12px
-                padding: 10px 30px 20px 0
-            .project__wrapper
-                margin-top: 40px
-                @include flex(center, center, row)
-                width: 100%
-                .project__visit
-                    @include flex(center, center, column)
-                    width: 50%
-                    height: 2.5em
-                    background-color: $tone-color
-                    &:hover
-                        background-color: $white-color
-                    &:hover .project__link
-                        color: $tone-color
-                    .project__link
-                        text-decoration: none
-                        color: $white-color
-                        text-transform: uppercase
-                        font-size: 0.8em
-                        font-weight: bold
-            .project__close
-                @include flex(center, flex-end, column)
+            
+            min-height: 220px
+            overflow: hidden
+            transition: 0.4s ease-in-out
+            margin: 0 auto
+            @include pictureJpg(brows)
+            @include mq(tablet)
+                flex-direction: row
+                flex-grow: 1
+                flex-wrap: no-wrap
                 width: 50%
-                padding-right: 20px
-                .project__icon
-                    font-size: 1.8em
+                min-height: 300px
+            &:hover
+                
+                background-image: none
+                background-color: #f5f5f5
+            &:hover .projects__title
+                top: 20%
+                
+            &:hover .projects__learn-more
+                top: 60%
+            .projects__title
+                @include flex(center, center,column)
+                position: absolute
+                top: -30%
+                left: 50%
+                transform: translate(-50%, -50%)
+                margin: 0 auto 20% auto
+                transition: 0.5s ease-in-out
+                .projects__h3
+                    color: $bgc-color
+                    font-weight: bold
+                    font-family: $family-raleway
+                    font-size: 1em
+                .projects__tech-title
+                    
+                    color: $tone-color
+                    font-family: $family-raleway
+                    font-size: 0.8em
+                    
+            .projects__learn-more
+                @include flex(center, center, row)
+                @include button-style
+                font-size: 14px
+                color: $tone-color
+                border: 1px solid $tone-color
+                position: absolute
+                top: 140%
+                left: 50%
+                transform: translate(-50%, -50%)
+                transition: 0.5s ease-in-out
+        .project__full
+            position: fixed 
+            top: 0
+            left: 0 
+            width: 100%
+            height: 100%
+            background-color: #fff
+            z-index: 999
+            transition: 0.2s linear
+            .project__pictures
+                position: relative
+                width: 100%
+                height: 50%
+                .project__slider
+                    width: 100%
+                    height: 100%
+                .project__arrow
+                    position: absolute
+                    width: 2.8em
+                    height: 2.8em
+                    background-color: #000
+                    opacity: 0.4
+                    transition: 0.2s ease-in
+
+                    &:nth-of-type(1)
+                        bottom: 0
+                        left: 0
+                    &:nth-of-type(2)
+                        bottom: 0 
+                        right: 0
+                    &:hover
+                        background-color: $tone-color
+                    .project__arrow-icon
+                        @include position-center
+                        color: #fff
+                        font-size: 18px
+                        transition: 0.2s ease-in-out
+            .project__description
+                width: 100%
+                height: 50%
+                @include flex(flex-start, flex-start,column)
+                padding: 20px 0 0 15px
+                .project__page
+                    font-size: 20px
+                    letter-spacing: 1px
+                .project__header
                     color: $font-color
-    .displayNone
-        visibility: hidden
-        display: none
+                    font-size: 0.8em
+                    letter-spacing: 1px
+                    padding-top: 5px
+                    &::after
+                        content: ''
+                        display: block
+                        width: 128%
+                        height: 2px
+                        border-bottom: 1px solid $font-color
+                        padding: 10px
+                .project__text
+                    color: $bgc-color
+                    font-size: 12px
+                    padding: 10px 30px 20px 0
+                .project__wrapper
+                    margin-top: 40px
+                    @include flex(center, center, row)
+                    width: 100%
+                    .project__visit
+                        @include flex(center, center, column)
+                        width: 50%
+                        height: 2.5em
+                        background-color: $tone-color
+                        &:hover
+                            background-color: $white-color
+                        &:hover .project__link
+                            color: $tone-color
+                        .project__link
+                            text-decoration: none
+                            color: $white-color
+                            text-transform: uppercase
+                            font-size: 0.8em
+                            font-weight: bold
+                .project__close
+                    @include flex(center, flex-end, column)
+                    width: 50%
+                    padding-right: 20px
+                    .project__icon
+                        font-size: 1.8em
+                        color: $font-color
+        .project__full--display-none
+            visibility: hidden
+            display: none

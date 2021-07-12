@@ -1,12 +1,12 @@
 .about
     @include flex(center, center, column)
     width: 100%
-    height: 100%
-    flex-wrap: wrap
+  
     flex-grow: 1
+    
     .about__header
         @include h2-wrapper
-        
+  
         .about__h2
             @include h2-style
             
@@ -27,6 +27,8 @@
             margin: 0 auto
             @include mq(tablet)
                 height: 17em
+            @include mq (tablet-wide)
+                width: 22%
             .about__six-angles
                 @include flex(center, center, column)
                 width: 80px
