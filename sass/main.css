@@ -1212,7 +1212,7 @@ body .main {
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   margin: 0 auto;
-  background-image: url("../img/brows.jpg");
+  background-image: url("../img/brows-intro.jpg");
   background-position: center;
   background-size: cover;
 }

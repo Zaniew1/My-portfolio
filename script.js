@@ -172,10 +172,7 @@ const changeSlideLeft = ()=>{
     }
     sliderPicture.src = slideList[active].img
 }
-console.log(slideList.length)
-console.log(sliderPicture)
-leftArrow.addEventListener('click', changeSlideLeft)
-rightArrow.addEventListener('click', changeSlideRight)
+
 
 
 
