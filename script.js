@@ -140,7 +140,7 @@ document.querySelector('.projects__learn-more--one').addEventListener('click', (
 })
 
 document.querySelector('.project__close').addEventListener('click', ()=> {
-    document.querySelector('.project__full').classList.add('.project__full--display-none')
+    document.querySelector('.project__full').classList.add('project__full--display-none')
 })
 
 
@@ -160,22 +160,22 @@ const rightArrow = document.querySelector('.project__arrow-icon--right');
 const changeSlideRight = ()=>{
     active++;
     
-    if(active === firstSlider.length){
+    if(active === slideList.length){
         active = 0;
     }
     sliderPicture.src = slideList[active].img
 }
 const changeSlideLeft = ()=>{
     active--;
-    if(active === 0){
-        active = firstSlider.length;
+    if(active < 0){
+        active = slideList.length -1;
     }
     sliderPicture.src = slideList[active].img
 }
-// console.log(slideList)
-// console.log(sliderPicture)
+console.log(slideList.length)
+console.log(sliderPicture)
 leftArrow.addEventListener('click', changeSlideLeft)
-leftArrow.addEventListener('click', changeSlideRight)
+rightArrow.addEventListener('click', changeSlideRight)
 
 
 
