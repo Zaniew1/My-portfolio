@@ -4,7 +4,9 @@
     height: 100%
     background-color: $bgc-color
     @include picturePng (dark)
-    
+    @include mq-land(phone)
+        flex-direction: row
+
     .front__face
         width: 40vw
         height: 40vw
@@ -16,9 +18,30 @@
             width: 30vw
             height: 30vw
             margin: 60px auto
+        @include mq(tablet-wide)
+            width: 40vw
+            height: 40vw
+            margin: 80px auto
+        @include mq-land(phone)
+            width: 30vw
+            height: 30vw
+
+        @include mq-land(desktop-wide)
+            width: 25vw
+            height: 25vw
     .front__text
         @include flex(center, center, column)
         text-align: center
+        @include mq-land(phone)
+            padding: 30px 20px 0 0
+        @include mq-land(phablet)
+            padding: 40px 30px 0 0
+        @include mq-land(tablet)
+            padding: 50px 60px 0 0     
+        @include mq-land(desktop)
+            padding: 80px 120px 0 0
+        @include mq-land(desktop-wide)
+            padding: 80px 260px 0 0  
         .front__text-h1
             font-family: $family-raleway
             font-size: 20px
@@ -27,18 +50,41 @@
             color: $white-color
             @include mq (tablet)
                 font-size: 26px
+            @include mq(tablet-wide)
+                font-size: 2rem
+            @include mq-land(phone)
+                font-size: 0.9rem
+            @include mq-land(phablet)
+                font-size: 1rem
+            @include mq-land(tablet)
+                font-size: 1.2rem
+            @include mq-land(tablet-wide)
+                font-size: 1.8em
+            @include mq-land(desktop)
+                font-size: 2rem
             .front__span
                 color: $bright-color
         .front__text-h2
-            width: 80%
+            width: 100%
             font-weight: 400
             font-family: $family-raleway
             font-size: 14px
             color: $white-color
             margin: 0 auto 5vh
             @include mq (tablet)
-                font-size: 18px 
-        
+                font-size: 18px
+            @include mq(tablet-wide)
+                font-size: 1.6rem
+            @include mq-land(phone)
+                font-size: 0.8rem
+            @include mq-land(phablet)
+                font-size: 0.9rem
+            @include mq-land(tablet)
+                font-size: 1rem
+            @include mq-land(tablet-wide)
+                font-size: 1.4rem
+            @include mq-land(desktop)
+                font-size: 1.6rem
         .front__button
             @include button-style
             @include mq (tablet)

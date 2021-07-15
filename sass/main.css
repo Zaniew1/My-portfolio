@@ -12,6 +12,7 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 body .main {
@@ -232,6 +233,15 @@ body .main {
   background-size: auto;
 }
 
+@media only screen and (orientation: landscape) and (min-width: 530px) {
+  .front {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .front .front__face {
   width: 40vw;
   height: 40vw;
@@ -252,6 +262,28 @@ body .main {
   }
 }
 
+@media only screen and (orientation: portrait) and (min-width: 1024px) {
+  .front .front__face {
+    width: 40vw;
+    height: 40vw;
+    margin: 80px auto;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 530px) {
+  .front .front__face {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .front .front__face {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
 .front .front__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -269,6 +301,36 @@ body .main {
   text-align: center;
 }
 
+@media only screen and (orientation: landscape) and (min-width: 530px) {
+  .front .front__text {
+    padding: 30px 20px 0 0;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 640px) {
+  .front .front__text {
+    padding: 40px 30px 0 0;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .front .front__text {
+    padding: 50px 60px 0 0;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .front .front__text {
+    padding: 80px 120px 0 0;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .front .front__text {
+    padding: 80px 260px 0 0;
+  }
+}
+
 .front .front__text .front__text-h1 {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
@@ -283,12 +345,48 @@ body .main {
   }
 }
 
+@media only screen and (orientation: portrait) and (min-width: 1024px) {
+  .front .front__text .front__text-h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 530px) {
+  .front .front__text .front__text-h1 {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 640px) {
+  .front .front__text .front__text-h1 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .front .front__text .front__text-h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .front .front__text .front__text-h1 {
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .front .front__text .front__text-h1 {
+    font-size: 2rem;
+  }
+}
+
 .front .front__text .front__text-h1 .front__span {
   color: #66fcf1;
 }
 
 .front .front__text .front__text-h2 {
-  width: 80%;
+  width: 100%;
   font-weight: 400;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
@@ -299,6 +397,42 @@ body .main {
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .front .front__text .front__text-h2 {
     font-size: 18px;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 1024px) {
+  .front .front__text .front__text-h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 530px) {
+  .front .front__text .front__text-h2 {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 640px) {
+  .front .front__text .front__text-h2 {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .front .front__text .front__text-h2 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .front .front__text .front__text-h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .front .front__text .front__text-h2 {
+    font-size: 1.6rem;
   }
 }
 
@@ -325,8 +459,49 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 1024px) {
   .front .front__text .front__button {
+    text-transform: uppercase;
     min-height: 60px;
     font-size: 1em;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 530px) {
+  .front .front__text .front__button {
+    font-size: 0.6rem;
+    width: 60%;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 640px) {
+  .front .front__text .front__button {
+    font-size: 0.8rem;
+    width: 80%;
+    min-height: 50px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .front .front__text .front__button {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .front .front__text .front__button {
+    font-size: 1.2rem;
+    min-height: 70px;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .front .front__text .front__button {
+    font-size: 1.3rem;
+    width: 70%;
+    min-height: 80px;
+    border: 3px solid #fff;
+    font-weight: bold;
   }
 }
 
@@ -388,6 +563,12 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .about .about__header {
+    height: 16em;
+  }
+}
+
 .about .about__header .about__h2 {
   font-size: 33px;
   font-family: "Raleway", sans-serif;
@@ -400,6 +581,18 @@ body .main {
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .about .about__header .about__h2 {
     font-size: 42px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .about .about__header .about__h2 {
+    font-size: 42px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__header .about__h2 {
+    font-size: 48px;
   }
 }
 
@@ -419,6 +612,19 @@ body .main {
   .about .about__header .about__h2::after {
     width: 120px;
     height: 5px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .about .about__header .about__h2::after {
+    width: 120px;
+    height: 5px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__header .about__h2::after {
+    width: 150px;
   }
 }
 
@@ -623,7 +829,7 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 1024px) {
   .contact {
-    height: 85%;
+    height: 70%;
   }
 }
 
@@ -651,6 +857,12 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .contact .contact__header {
+    height: 16em;
+  }
+}
+
 .contact .contact__header .contact__h2 {
   font-size: 33px;
   font-family: "Raleway", sans-serif;
@@ -664,6 +876,18 @@ body .main {
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .contact .contact__header .contact__h2 {
     font-size: 42px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .contact .contact__header .contact__h2 {
+    font-size: 42px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .contact .contact__header .contact__h2 {
+    font-size: 48px;
   }
 }
 
@@ -684,6 +908,19 @@ body .main {
   .contact .contact__header .contact__h2::after {
     width: 120px;
     height: 5px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .contact .contact__header .contact__h2::after {
+    width: 120px;
+    height: 5px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .contact .contact__header .contact__h2::after {
+    width: 150px;
   }
 }
 
@@ -722,6 +959,25 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .contact .contact__wrap .contact__form .contact__form-header {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .contact .contact__wrap .contact__form .contact__form-header {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .contact .contact__wrap .contact__form .contact__form-header {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
+
 .contact .contact__wrap .contact__form .contact__input {
   background-color: #616161;
   width: 90%;
@@ -745,6 +1001,25 @@ body .main {
   .contact .contact__wrap .contact__form .contact__input {
     width: 50%;
     min-height: 60px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .contact .contact__wrap .contact__form .contact__input {
+    width: 60%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .contact .contact__wrap .contact__form .contact__input {
+    width: 50%;
+    min-height: 50px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .contact .contact__wrap .contact__form .contact__input {
+    width: 40%;
   }
 }
 
@@ -783,6 +1058,40 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .contact .contact__wrap .contact__form .contact__input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  .contact .contact__wrap .contact__form .contact__input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .contact .contact__wrap .contact__form .contact__input::-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .contact .contact__wrap .contact__form .contact__input::placeholder {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .contact .contact__wrap .contact__form .contact__input::-webkit-input-placeholder {
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+  .contact .contact__wrap .contact__form .contact__input:-ms-input-placeholder {
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+  .contact .contact__wrap .contact__form .contact__input::-ms-input-placeholder {
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+  .contact .contact__wrap .contact__form .contact__input::placeholder {
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+}
+
 .contact .contact__wrap .contact__form .contact__text {
   background-color: #616161;
   font-family: "Raleway", sans-serif;
@@ -811,6 +1120,26 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .contact .contact__wrap .contact__form .contact__text {
+    width: 60%;
+    min-height: 220px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .contact .contact__wrap .contact__form .contact__text {
+    width: 50%;
+    min-height: 280px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .contact .contact__wrap .contact__form .contact__text {
+    width: 40%;
+  }
+}
+
 .contact .contact__wrap .contact__form .contact__text:focus {
   border: 1px solid #66fcf1;
 }
@@ -833,16 +1162,50 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .contact .contact__wrap .contact__form .contact__text::-webkit-input-placeholder {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .contact .contact__wrap .contact__form .contact__text:-ms-input-placeholder {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .contact .contact__wrap .contact__form .contact__text::-ms-input-placeholder {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .contact .contact__wrap .contact__form .contact__text::placeholder {
-    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .contact .contact__wrap .contact__form .contact__text::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  .contact .contact__wrap .contact__form .contact__text:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .contact .contact__wrap .contact__form .contact__text::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .contact .contact__wrap .contact__form .contact__text::placeholder {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .contact .contact__wrap .contact__form .contact__text::-webkit-input-placeholder {
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+  .contact .contact__wrap .contact__form .contact__text:-ms-input-placeholder {
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+  .contact .contact__wrap .contact__form .contact__text::-ms-input-placeholder {
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+  .contact .contact__wrap .contact__form .contact__text::placeholder {
+    font-size: 1.2rem;
+    opacity: 0.6;
   }
 }
 
@@ -870,8 +1233,71 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 1024px) {
   .contact .contact__wrap .contact__form .contact__submit {
+    text-transform: uppercase;
     min-height: 60px;
     font-size: 1em;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 530px) {
+  .contact .contact__wrap .contact__form .contact__submit {
+    font-size: 0.6rem;
+    width: 60%;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 640px) {
+  .contact .contact__wrap .contact__form .contact__submit {
+    font-size: 0.8rem;
+    width: 80%;
+    min-height: 50px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .contact .contact__wrap .contact__form .contact__submit {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .contact .contact__wrap .contact__form .contact__submit {
+    font-size: 1.2rem;
+    min-height: 70px;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .contact .contact__wrap .contact__form .contact__submit {
+    font-size: 1.3rem;
+    width: 70%;
+    min-height: 80px;
+    border: 3px solid #fff;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 530px) {
+  .contact .contact__wrap .contact__form .contact__submit {
+    width: 40%;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .contact .contact__wrap .contact__form .contact__submit {
+    width: 35%;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .contact .contact__wrap .contact__form .contact__submit {
+    width: 20%;
   }
 }
 
@@ -969,6 +1395,18 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .footer .footer__list {
+    width: 50%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .footer .footer__list {
+    width: 30%;
+  }
+}
+
 .footer .footer__list .footer__social {
   position: relative;
   width: 3.5em;
@@ -1047,6 +1485,12 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .projects .projects__header {
+    height: 16em;
+  }
+}
+
 .projects .projects__header .projects__h2 {
   font-size: 33px;
   font-family: "Raleway", sans-serif;
@@ -1059,6 +1503,18 @@ body .main {
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .projects .projects__header .projects__h2 {
     font-size: 42px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .projects .projects__header .projects__h2 {
+    font-size: 42px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .projects .projects__header .projects__h2 {
+    font-size: 48px;
   }
 }
 
@@ -1078,6 +1534,19 @@ body .main {
   .projects .projects__header .projects__h2::after {
     width: 120px;
     height: 5px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .projects .projects__header .projects__h2::after {
+    width: 120px;
+    height: 5px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .projects .projects__header .projects__h2::after {
+    width: 150px;
   }
 }
 
@@ -1140,16 +1609,16 @@ body .main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 0;
-  height: 0;
-  -webkit-transition: 0.4s ease-in;
-  transition: 0.4s ease-in;
+  width: 100%;
+  height: 50%;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .projects .projects__search .projects__name--active-color {
   color: #fff;
   height: 100%;
-  width: 100%;
   background-color: #45a29e;
 }
 
@@ -1230,6 +1699,9 @@ body .main {
         flex-wrap: no-wrap;
     width: 50%;
     min-height: 300px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    background-color: #fff;
   }
 }
 
@@ -1329,8 +1801,49 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 1024px) {
   .projects .projects__wrapp .projects__project .projects__learn-more {
+    text-transform: uppercase;
     min-height: 60px;
     font-size: 1em;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 530px) {
+  .projects .projects__wrapp .projects__project .projects__learn-more {
+    font-size: 0.6rem;
+    width: 60%;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 640px) {
+  .projects .projects__wrapp .projects__project .projects__learn-more {
+    font-size: 0.8rem;
+    width: 80%;
+    min-height: 50px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .projects .projects__wrapp .projects__project .projects__learn-more {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .projects .projects__wrapp .projects__project .projects__learn-more {
+    font-size: 1.2rem;
+    min-height: 70px;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .projects .projects__wrapp .projects__project .projects__learn-more {
+    font-size: 1.3rem;
+    width: 70%;
+    min-height: 80px;
+    border: 3px solid #fff;
+    font-weight: bold;
   }
 }
 

@@ -3,7 +3,8 @@
     @include mq(tablet)
         height:  80%
     @include mq (tablet-wide)
-        height: 85%
+        height: 70%
+    
     .contact__header
         @include h2-wrapper
         .contact__h2
@@ -24,6 +25,13 @@
                     font-size: 14px
                 @include mq (tablet-wide)
                     font-size: 16px
+                @include mq-land(tablet)
+                    font-size: 14px
+                @include mq-land(tablet-wide)
+                    font-size: 16px
+                @include mq-land(desktop)
+                    font-size: 18px
+                    margin-bottom: 15px
             .contact__input
                 background-color: $font-bgc
                 width: 90%
@@ -40,13 +48,25 @@
                 @include mq (tablet-wide)
                     width: 50%
                     min-height: 60px
+                @include mq-land(tablet)
+                    width: 60%
+                @include mq-land (tablet-wide)
+                    width: 50%
+                    min-height: 50px
+                @include mq-land(desktop)
+                    width: 40%
                 &:focus
                     border: 1px solid $bright-color
                 &::placeholder
                     color: #fff
                     @include mq(tablet)
                         font-size: 16px
-                    
+                    @include mq-land(tablet)
+                        font-size: 16px
+                    @include mq-land(tablet-wide)
+                        font-size: 1.2rem
+                        opacity: 0.6 
+                  
             .contact__text
                 background-color: $font-bgc
                 font-family: $family-raleway
@@ -65,16 +85,39 @@
                 @include mq (tablet-wide)
                     width: 50%
                     min-height: 340px
+                @include mq-land(tablet)
+                    width: 60%
+                    min-height: 220px
+                @include mq-land(tablet-wide)
+                    width: 50%
+                    min-height: 280px
+                @include mq-land(desktop)
+                    width: 40%
                 &:focus
                     border: 1px solid $bright-color
                 &::placeholder
                     color: #fff
                     @include mq(tablet)
-                        font-size: 16px 
+                        font-size: 1rem
+                    @include mq-land(tablet)
+                        font-size: 1rem
+                    @include mq-land(tablet-wide)
+                        font-size: 1.2rem
+                        opacity: 0.6 
+             
             .contact__submit
                 @include button-style
                 margin: 20px auto 50px auto
-                
+                @include mq-land(phone)
+                    width: 40%
+                    font-size: 0.8rem
+                @include mq-land(tablet-wide)
+                    width: 35%
+                    font-size: 1rem
+                    font-weight: bold
+                    margin-bottom: 60px
+                @include mq-land(desktop)
+                    width: 20%
                 &:hover
                     background-color: $bright-color
                     border: none
