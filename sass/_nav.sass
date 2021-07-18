@@ -1,37 +1,38 @@
 .nav
-    scroll-behavior: smooth
-    .nav__bar 
+    .nav__bar
         position: fixed
         top: 0
-        right: 0
+        left: 0
         width: 100%
+        height: 3rem
         background-color: #2d2e38
-        height: 50px
-        z-index: 100
+        z-index: 10000
         transition: 0.4s ease-in-out
         overflow: hidden
         @include mq(tablet)
-            height: 0px
+            height: 0
+        @include mq-land(tablet)
+            height: 0
         .nav__toggle
             @include flex(flex-end, center, row)
             position: relative
-            top: 0 
+            top: 0
             left: 0
             width: 100%
-            height: 50px
+            height: 3rem
             padding: 0 20px
             color: $font-color
             cursor: pointer
             border-bottom: 4px solid $bright-color
+            
             &::before
-                content: 'Menu'
+                content: "Menu"
                 padding: 0 10px
-                @include mq(tablet)
-                    display: none
+
             .nav__span
                 position: relative
                 width: 20px 
-                height: 50px
+                height: 3rem
                 &::before
                     content: ''
                     position: absolute
@@ -41,8 +42,6 @@
                     height: 2px
                     background-color: $white-color
                     transition: 0.4s ease-in-out
-                    @include mq(tablet)
-                        display: none
                 &::after
                     content: ''
                     position: absolute
@@ -52,23 +51,32 @@
                     height: 2px
                     background-color: $white-color
                     transition: 0.4s ease-in-out
-                    @include mq(tablet)
-                        display: none
         .nav__toggle--active
             &::before
-                content: 'Close'
+                content: "Ukryj"
             .nav__span
                 &::before
                     transform: rotate(225deg)
                     top: 24px
                 &::after
                     transform: rotate(135deg)
-                    bottom: 24px
+                    bottom: 22px
         .nav__list
             position: relative
-            background-color: #2d2e38
+            background-color: #2d2e38        
             @include mq(tablet)
                 @include flex(center, center, row)
+                padding-top: 5px
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 50% 
+                left: 50%
+                transform: translate(-50%, -50%)
+                border-bottom: 3px solid $bright-color
+            @include mq-land(tablet)
+                @include flex(center, center, row)
+                padding-top: 5px
                 width: 100%
                 height: 100%
                 position: absolute
@@ -79,26 +87,34 @@
             .nav__item
                 list-style-type: none
                 color: $font-color
+                cursor: pointer
+                
                 .nav__link
-                    positio: relative
+                    position: relative
                     text-decoration: none
                     display: block
                     padding: 10px 20px 
-                    height: 50px
+                    height: 3rem
                     color: $font-color
                     font-size: 1em
-                    transition: 1s ease-in-out
+                    transition: 0.4s ease-in-out
                     @include mq(tablet)
-                        margin: 10px 15px 0 0
+                        text-transform: uppercase
+                    @include mq-land(tablet)
+                        text-transform: uppercase
+                    &:hover
+                        color: $bright-color
                     &:focus
                         transition: 0s
                         color: $bright-color
-                    &:first-child
-                        
                 .nav__link--color
                     color: $bright-color
                     transition: 0.4s ease-in-out
     .nav__bar--active
         height: 250px
     .nav__bar--sticky-big-screen
-        height: 60px
+        height: 3rem
+        @include mq(tablet)
+            height: 3.5rem
+        @include mq-land(tablet)
+            height: 3.5rem        

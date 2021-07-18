@@ -19,7 +19,12 @@
         @include flex(center,center,row)
         flex-wrap: wrap
         margin: 20px auto
-
+        @include mq-land(desktop)
+            margin: 40px 5%
+        @include mq-land(desktop-wide)
+            margin: 40px 10%
+        @include mq-land(big-desktop)
+            margin: 60px 15% 
         .about__pros
             @include flex(flex-start, center, column)
             height: 12em
@@ -27,7 +32,11 @@
             margin: 0 auto
             @include mq(tablet)
                 height: 17em
+            @include mq-land(tablet)
+                height: 17em
             @include mq (tablet-wide)
+                width: 22%
+            @include mq-land (tablet-wide)
                 width: 22%
             .about__six-angles
                 @include flex(center, center, column)
@@ -38,10 +47,15 @@
                 @include mq(tablet)
                     width: 120px
                     height: 120px
+                @include mq-land(tablet)
+                    width: 120px
+                    height: 120px
                 .about__six-angles-icon
                     color: $white-color
                     font-size: 30px
                     @include mq(tablet)
+                        font-size: 42px
+                    @include mq-land(tablet)
                         font-size: 42px
             .about__caption
                 margin: 10px auto 5px auto
@@ -51,6 +65,8 @@
                 color: $font-bgc
                 @include mq(tablet)
                     font-size: 24px
+                @include mq-land(tablet)
+                    font-size: 24px
             .about__description
                 font-family: $family-raleway
                 font-weight: 400
@@ -58,6 +74,8 @@
                 text-align: center
                 color: $font-bgc
                 @include mq(tablet)
+                    font-size: 16px
+                @include mq-land(tablet)
                     font-size: 16px
     .about__wrapper
         @include flex(center,center,column)

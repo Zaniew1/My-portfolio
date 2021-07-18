@@ -20,18 +20,14 @@ body .main {
   height: 100%;
 }
 
-.nav {
-  scroll-behavior: smooth;
-}
-
 .nav .nav__bar {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   width: 100%;
+  height: 3rem;
   background-color: #2d2e38;
-  height: 50px;
-  z-index: 100;
+  z-index: 10000;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   overflow: hidden;
@@ -39,7 +35,13 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .nav .nav__bar {
-    height: 0px;
+    height: 0;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .nav .nav__bar {
+    height: 0;
   }
 }
 
@@ -61,7 +63,7 @@ body .main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 3rem;
   padding: 0 20px;
   color: #c5c6c7;
   cursor: pointer;
@@ -69,20 +71,14 @@ body .main {
 }
 
 .nav .nav__bar .nav__toggle::before {
-  content: 'Menu';
+  content: "Menu";
   padding: 0 10px;
-}
-
-@media only screen and (orientation: portrait) and (min-width: 768px) {
-  .nav .nav__bar .nav__toggle::before {
-    display: none;
-  }
 }
 
 .nav .nav__bar .nav__toggle .nav__span {
   position: relative;
   width: 20px;
-  height: 50px;
+  height: 3rem;
 }
 
 .nav .nav__bar .nav__toggle .nav__span::before {
@@ -97,12 +93,6 @@ body .main {
   transition: 0.4s ease-in-out;
 }
 
-@media only screen and (orientation: portrait) and (min-width: 768px) {
-  .nav .nav__bar .nav__toggle .nav__span::before {
-    display: none;
-  }
-}
-
 .nav .nav__bar .nav__toggle .nav__span::after {
   content: '';
   position: absolute;
@@ -115,14 +105,8 @@ body .main {
   transition: 0.4s ease-in-out;
 }
 
-@media only screen and (orientation: portrait) and (min-width: 768px) {
-  .nav .nav__bar .nav__toggle .nav__span::after {
-    display: none;
-  }
-}
-
 .nav .nav__bar .nav__toggle--active::before {
-  content: 'Close';
+  content: "Ukryj";
 }
 
 .nav .nav__bar .nav__toggle--active .nav__span::before {
@@ -134,7 +118,7 @@ body .main {
 .nav .nav__bar .nav__toggle--active .nav__span::after {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
-  bottom: 24px;
+  bottom: 22px;
 }
 
 .nav .nav__bar .nav__list {
@@ -157,6 +141,34 @@ body .main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding-top: 5px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border-bottom: 3px solid #66fcf1;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .nav .nav__bar .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 5px;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -171,24 +183,35 @@ body .main {
 .nav .nav__bar .nav__list .nav__item {
   list-style-type: none;
   color: #c5c6c7;
+  cursor: pointer;
 }
 
 .nav .nav__bar .nav__list .nav__item .nav__link {
-  positio: relative;
+  position: relative;
   text-decoration: none;
   display: block;
   padding: 10px 20px;
-  height: 50px;
+  height: 3rem;
   color: #c5c6c7;
   font-size: 1em;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .nav .nav__bar .nav__list .nav__item .nav__link {
-    margin: 10px 15px 0 0;
+    text-transform: uppercase;
   }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .nav .nav__bar .nav__list .nav__item .nav__link {
+    text-transform: uppercase;
+  }
+}
+
+.nav .nav__bar .nav__list .nav__item .nav__link:hover {
+  color: #66fcf1;
 }
 
 .nav .nav__bar .nav__list .nav__item .nav__link:focus {
@@ -208,7 +231,19 @@ body .main {
 }
 
 .nav .nav__bar--sticky-big-screen {
-  height: 60px;
+  height: 3rem;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .nav .nav__bar--sticky-big-screen {
+    height: 3.5rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .nav .nav__bar--sticky-big-screen {
+    height: 3.5rem;
+  }
 }
 
 .front {
@@ -228,9 +263,9 @@ body .main {
   width: 100%;
   height: 100%;
   background-color: #0b0c10;
-  background-image: url("../img/dark.png");
+  background-image: url("../img/wallpaper.jpg");
   background-position: center;
-  background-size: auto;
+  background-size: cover;
 }
 
 @media only screen and (orientation: landscape) and (min-width: 530px) {
@@ -279,8 +314,8 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 1440px) {
   .front .front__face {
-    width: 25vw;
-    height: 25vw;
+    width: 20vw;
+    height: 20vw;
   }
 }
 
@@ -371,13 +406,13 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 1024px) {
   .front .front__text .front__text-h1 {
-    font-size: 1.8em;
+    font-size: 1.4em;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1248px) {
   .front .front__text .front__text-h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -426,13 +461,13 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 1024px) {
   .front .front__text .front__text-h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1248px) {
   .front .front__text .front__text-h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -497,11 +532,10 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 1248px) {
   .front .front__text .front__button {
-    font-size: 1.3rem;
+    font-size: 1rem;
     width: 70%;
-    min-height: 80px;
-    border: 3px solid #fff;
-    font-weight: bold;
+    min-height: 60px;
+    border: 2px solid #fff;
   }
 }
 
@@ -654,6 +688,24 @@ body .main {
   margin: 20px auto;
 }
 
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrap {
+    margin: 40px 5%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrap {
+    margin: 40px 10%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1920px) {
+  .about .about__wrap {
+    margin: 60px 15%;
+  }
+}
+
 .about .about__wrap .about__pros {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -679,7 +731,19 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .about .about__wrap .about__pros {
+    height: 17em;
+  }
+}
+
 @media only screen and (orientation: portrait) and (min-width: 1024px) {
+  .about .about__wrap .about__pros {
+    width: 22%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
   .about .about__wrap .about__pros {
     width: 22%;
   }
@@ -713,12 +777,25 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .about .about__wrap .about__pros .about__six-angles {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 .about .about__wrap .about__pros .about__six-angles .about__six-angles-icon {
   color: #fff;
   font-size: 30px;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__wrap .about__pros .about__six-angles .about__six-angles-icon {
+    font-size: 42px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
   .about .about__wrap .about__pros .about__six-angles .about__six-angles-icon {
     font-size: 42px;
   }
@@ -738,6 +815,12 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .about .about__wrap .about__pros .about__caption {
+    font-size: 24px;
+  }
+}
+
 .about .about__wrap .about__pros .about__description {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
@@ -747,6 +830,12 @@ body .main {
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__wrap .about__pros .about__description {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
   .about .about__wrap .about__pros .about__description {
     font-size: 16px;
   }
@@ -816,9 +905,9 @@ body .main {
 }
 
 .contact {
-  background-image: url("../img/dark.png");
+  background-image: url("../img/wallpaper.jpg");
   background-position: center;
-  background-size: auto;
+  background-size: cover;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -1271,11 +1360,10 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 1248px) {
   .contact .contact__wrap .contact__form .contact__submit {
-    font-size: 1.3rem;
+    font-size: 1rem;
     width: 70%;
-    min-height: 80px;
-    border: 3px solid #fff;
-    font-weight: bold;
+    min-height: 60px;
+    border: 2px solid #fff;
   }
 }
 
@@ -1321,9 +1409,9 @@ body .main {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  background-image: url("../img/dark.png");
+  background-image: url("../img/wallpaper.jpg");
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   border-top: 1px solid #66fcf1;
   scroll-behavior: auto;
 }
@@ -1457,7 +1545,7 @@ body .main {
 
 .projects {
   margin: 10% auto 0% auto;
-  padding-bottom: 30%;
+  padding-bottom: 100px;
   background-color: #f5f5f5;
 }
 
@@ -1567,6 +1655,18 @@ body .main {
   margin: 2em auto 4em auto;
 }
 
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .projects .projects__search {
+    width: 75%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .projects .projects__search {
+    width: 40%;
+  }
+}
+
 .projects .projects__search .projects__technology {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1640,6 +1740,8 @@ body .main {
   margin: 0 auto;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -1657,6 +1759,50 @@ body .main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: 90%;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 1024px) {
+  .projects .projects__wrapp {
+    width: 75%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 530px) {
+  .projects .projects__wrapp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 95%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .projects .projects__wrapp {
+    width: 75%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .projects .projects__wrapp {
+    width: 90%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .projects .projects__wrapp {
+    width: 65%;
   }
 }
 
@@ -1681,28 +1827,49 @@ body .main {
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   margin: 0 auto;
-  background-image: url("../img/brows-intro.jpg");
-  background-position: center;
-  background-size: cover;
+  border: 1px solid #000;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .projects .projects__wrapp .projects__project {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -ms-flex-wrap: no-wrap;
-        flex-wrap: no-wrap;
     width: 50%;
-    min-height: 300px;
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-    background-color: #fff;
   }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 1024px) {
+  .projects .projects__wrapp .projects__project {
+    min-height: 250px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 530px) {
+  .projects .projects__wrapp .projects__project {
+    width: 50%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 640px) {
+  .projects .projects__wrapp .projects__project {
+    min-height: 240px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .projects .projects__wrapp .projects__project {
+    width: 33.333%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .projects .projects__wrapp .projects__project {
+    min-height: 300px;
+  }
+}
+
+.projects .projects__wrapp .projects__project:nth-of-type(6) {
+  background-image: url("../img/wallpaper.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .projects .projects__wrapp .projects__project:hover {
@@ -1839,11 +2006,10 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 1248px) {
   .projects .projects__wrapp .projects__project .projects__learn-more {
-    font-size: 1.3rem;
+    font-size: 1rem;
     width: 70%;
-    min-height: 80px;
-    border: 3px solid #fff;
-    font-weight: bold;
+    min-height: 60px;
+    border: 2px solid #fff;
   }
 }
 
