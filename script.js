@@ -176,6 +176,95 @@ const changeSlideLeft = ()=>{
 
 
 
+
+
+const showAllProject = function(){
+    document.querySelectorAll('.project__css').forEach(project => project.classList.remove('projects__project--hide'))
+    document.querySelectorAll('.project__js').forEach(project => project.classList.remove('projects__project--hide'))
+    document.querySelectorAll('.project__react').forEach(project => project.classList.remove('projects__project--hide'))
+}
+const showCssProject = function(){
+    document.querySelectorAll('.project__css').forEach(project => project.classList.remove('projects__project--hide'))
+    document.querySelectorAll('.project__js').forEach(project => project.classList.add('projects__project--hide'))
+    document.querySelectorAll('.project__react').forEach(project => project.classList.add('projects__project--hide'))
+}
+const showJsProject = function(){
+    document.querySelectorAll('.project__js').forEach(project => project.classList.remove('projects__project--hide'))
+    document.querySelectorAll('.project__css').forEach(project => project.classList.add('projects__project--hide'))
+    document.querySelectorAll('.project__react').forEach(project => project.classList.add('projects__project--hide'))
+}
+
+const showReactProject = function(){
+    document.querySelectorAll('.project__react').forEach(project => project.classList.remove('projects__project--hide'))
+    document.querySelectorAll('.project__css').forEach(project => project.classList.add('projects__project--hide'))
+    document.querySelectorAll('.project__js').forEach(project => project.classList.add('projects__project--hide')) 
+}
+
+
+document.addEventListener('scroll', ()=>{
+    const windowScrollValue = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    const aboutH2 = document.querySelector('.about__h2');
+    const aboutHeaderHeight = document.querySelector('.about__header').offsetHeight;
+    const distanceAboutH2FromTop = aboutH2.offsetTop;
+
+    if(windowScrollValue > distanceAboutH2FromTop - windowHeight + aboutHeaderHeight ){
+        aboutH2.classList.add('about__h2--animate');   
+    }
+
+    const sixAngles = [...document.querySelectorAll('.about__six-angles')]
+    const aboutWrap = document.querySelector('.about__wrap')
+    const aboutWrapHeight = document.querySelector('.about__wrap').offsetHeight;
+    const distanceSixAnglesFromTop = aboutWrap.offsetTop;
+
+    if(windowScrollValue > distanceSixAnglesFromTop - windowHeight + aboutWrapHeight ){
+        sixAngles.forEach(angle => angle.classList.add('about__six-angles--animate'));
+        sixAngles.forEach((angle, index) => {
+            let seconds = index/3;
+            angle.style.transitionDelay = `${seconds}s`;
+        })
+    }
+    const aboutCaption = [...document.querySelectorAll('.about__caption')];
+    const aboutDescription = [...document.querySelectorAll('.about__description')];
+
+    if(windowScrollValue > distanceSixAnglesFromTop - windowHeight + aboutWrapHeight + 100 ){
+        aboutCaption.forEach(caption => caption.classList.add('about__caption--animate'))
+        aboutCaption.forEach((caption, index) => {
+            let seconds = index/4;
+            caption.style.transitionDelay = `${seconds}s`;
+        })
+        aboutDescription.forEach(description => description.classList.add('about__description--animate'))
+        aboutDescription.forEach((description, index) => {
+            let seconds = index/4;
+            description.style.transitionDelay = `${seconds}s`;
+        })
+
+
+    }
+
+
+
+
+    const whoAmI = document.querySelector('.about__text-wrap');
+    const whoAmIWrapper = document.querySelector('.about__wrapper').offsetHeight;
+    const distanceWhoAmIFromTop = whoAmI.offsetTop;
+
+    if(windowScrollValue > distanceWhoAmIFromTop - windowHeight + whoAmIWrapper ){
+        whoAmI.classList.add('about__text-wrap--animate');
+
+    }
+
+})
+
+
+
+
+
+
+
+
+
 window.addEventListener("scroll", () =>{
     if(window.innerWidth >= 768 && window.innerHeight >= 500)
     {                                                                           // kod rozwijający małe menu po scrollu użytkownika 

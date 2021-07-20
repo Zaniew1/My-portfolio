@@ -610,6 +610,11 @@ body .main {
   font-weight: bold;
   position: relative;
   padding-bottom: 15px;
+  -webkit-transform: translate(20vw);
+          transform: translate(20vw);
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
+  opacity: 0;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -667,6 +672,12 @@ body .main {
     width: 100px;
     height: 5px;
   }
+}
+
+.about .about__header .about__h2--animate {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
 }
 
 .about .about__wrap {
@@ -768,6 +779,16 @@ body .main {
   background-color: #45a29e;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
+  -webkit-transform: rotateY(80deg);
+          transform: rotateY(80deg);
+  opacity: 0;
+  -webkit-transition: .7s linear;
+  transition: .7s linear;
+}
+
+.about .about__wrap .about__pros .about__six-angles:nth-of-type(2) {
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -784,19 +805,25 @@ body .main {
   }
 }
 
-.about .about__wrap .about__pros .about__six-angles .about__six-angles-icon {
+.about .about__wrap .about__pros .about__six-angles--animate {
+  opacity: 1;
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.about .about__wrap .about__pros .about__six-angles--animate .about__six-angles-icon {
   color: #fff;
   font-size: 30px;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
-  .about .about__wrap .about__pros .about__six-angles .about__six-angles-icon {
+  .about .about__wrap .about__pros .about__six-angles--animate .about__six-angles-icon {
     font-size: 42px;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 768px) {
-  .about .about__wrap .about__pros .about__six-angles .about__six-angles-icon {
+  .about .about__wrap .about__pros .about__six-angles--animate .about__six-angles-icon {
     font-size: 42px;
   }
 }
@@ -806,7 +833,9 @@ body .main {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: bold;
-  color: #616161;
+  opacity: 0;
+  tranisition: .5s linear;
+  color: #fff;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -819,6 +848,11 @@ body .main {
   .about .about__wrap .about__pros .about__caption {
     font-size: 24px;
   }
+}
+
+.about .about__wrap .about__pros .about__caption--animate {
+  opacity: 1;
+  color: #616161;
 }
 
 .about .about__wrap .about__pros .about__description {
@@ -827,6 +861,8 @@ body .main {
   font-size: 11px;
   text-align: center;
   color: #616161;
+  opacity: 0;
+  tranisition: .6s linear;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -839,6 +875,10 @@ body .main {
   .about .about__wrap .about__pros .about__description {
     font-size: 16px;
   }
+}
+
+.about .about__wrap .about__pros .about__description--animate {
+  opacity: 1;
 }
 
 .about .about__wrapper {
@@ -873,9 +913,19 @@ body .main {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 10px auto;
+  -webkit-transform: translateY(10vh);
+          transform: translateY(10vh);
+  -webkit-transition: .6s ease-in;
+  transition: .6s ease-in;
 }
 
-.about .about__wrapper .about__text-wrap .about__me-header {
+.about .about__wrapper .about__text-wrap--animate {
+  opacity: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.about .about__wrapper .about__text-wrap--animate .about__me-header {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -884,12 +934,12 @@ body .main {
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
-  .about .about__wrapper .about__text-wrap .about__me-header {
+  .about .about__wrapper .about__text-wrap--animate .about__me-header {
     font-size: 28px;
   }
 }
 
-.about .about__wrapper .about__text-wrap .about__me-description {
+.about .about__wrapper .about__text-wrap--animate .about__me-description {
   font-family: "Raleway", sans-serif;
   font-size: 11px;
   text-align: center;
@@ -898,7 +948,7 @@ body .main {
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
-  .about .about__wrapper .about__text-wrap .about__me-description {
+  .about .about__wrapper .about__text-wrap--animate .about__me-description {
     font-size: 16px;
     padding: 0 60px;
   }
@@ -908,18 +958,6 @@ body .main {
   background-image: url("../img/wallpaper.jpg");
   background-position: center;
   background-size: cover;
-}
-
-@media only screen and (orientation: portrait) and (min-width: 768px) {
-  .contact {
-    height: 80%;
-  }
-}
-
-@media only screen and (orientation: portrait) and (min-width: 1024px) {
-  .contact {
-    height: 70%;
-  }
 }
 
 .contact .contact__header {
@@ -1071,6 +1109,7 @@ body .main {
   background-color: #616161;
   width: 90%;
   min-height: 40px;
+  max-width: 800px;
   margin: 10px auto;
   outline: none;
   border: none;
@@ -1193,6 +1232,7 @@ body .main {
   color: #66fcf1;
   resize: vertical;
   min-height: 100px;
+  max-width: 800px;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -1364,6 +1404,12 @@ body .main {
     width: 70%;
     min-height: 60px;
     border: 2px solid #fff;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .contact .contact__wrap .contact__form .contact__submit {
+    margin: 50px auto 60px auto;
   }
 }
 
@@ -1655,6 +1701,12 @@ body .main {
   margin: 2em auto 4em auto;
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .projects .projects__search {
+    width: 75%;
+  }
+}
+
 @media only screen and (orientation: landscape) and (min-width: 1024px) {
   .projects .projects__search {
     width: 75%;
@@ -1821,13 +1873,15 @@ body .main {
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
-  min-height: 220px;
+  height: 220px;
   overflow: hidden;
+  opacity: 1;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
-  margin: 0 auto;
-  border: 1px solid #000;
+  margin: 0;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -1838,7 +1892,7 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 1024px) {
   .projects .projects__wrapp .projects__project {
-    min-height: 250px;
+    height: 250px;
   }
 }
 
@@ -1850,7 +1904,7 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 640px) {
   .projects .projects__wrapp .projects__project {
-    min-height: 240px;
+    height: 240px;
   }
 }
 
@@ -1862,14 +1916,8 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 1440px) {
   .projects .projects__wrapp .projects__project {
-    min-height: 300px;
+    height: 300px;
   }
-}
-
-.projects .projects__wrapp .projects__project:nth-of-type(6) {
-  background-image: url("../img/wallpaper.jpg");
-  background-position: center;
-  background-size: cover;
 }
 
 .projects .projects__wrapp .projects__project:hover {
@@ -2197,5 +2245,31 @@ body .main {
 .projects .projects__wrapp .project__full--display-none {
   visibility: hidden;
   display: none;
+}
+
+.projects .projects__wrapp .project__css {
+  background-image: url("../img/brows-intro.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.projects .projects__wrapp .project__js {
+  background-image: url("../img/meditation.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.projects .projects__wrapp .project__react {
+  background-image: url("../img/react.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.projects .projects__wrapp .projects__project--hide {
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  height: 0;
+  position: absolute;
+  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */

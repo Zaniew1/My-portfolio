@@ -1,20 +1,22 @@
 .about
     @include flex(center, center, column)
     width: 100%
-  
     flex-grow: 1
-    
     .about__header
         @include h2-wrapper
-  
         .about__h2
             @include h2-style
-            
+            transform: translate(20vw)
+            transition: .5s linear
+            opacity: 0
             &::after
                 @include h2-after
                 @include mq(tablet)
                     width: 100px
                     height: 5px
+        .about__h2--animate
+            transform: translate(0)
+            opacity: 1
     .about__wrap
         @include flex(center,center,row)
         flex-wrap: wrap
@@ -44,12 +46,20 @@
                 height: 80px
                 background-color: $tone-color
                 clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0)
+                transform: rotateY(80deg)
+                opacity: 0
+                transition: .7s linear
+                &:nth-of-type(2)
+                    transition-delay: 2s
                 @include mq(tablet)
                     width: 120px
                     height: 120px
                 @include mq-land(tablet)
                     width: 120px
                     height: 120px
+            .about__six-angles--animate
+                opacity: 1
+                transform: rotateY(0)
                 .about__six-angles-icon
                     color: $white-color
                     font-size: 30px
@@ -62,28 +72,42 @@
                 font-family: $family-raleway
                 font-size: 16px
                 font-weight: bold
-                color: $font-bgc
+                
+                opacity: 0
+                tranisition: .5s linear
+                color: $white-color
                 @include mq(tablet)
                     font-size: 24px
                 @include mq-land(tablet)
                     font-size: 24px
+            .about__caption--animate
+                opacity: 1
+                color: $font-bgc
             .about__description
                 font-family: $family-raleway
                 font-weight: 400
                 font-size: 11px
                 text-align: center
                 color: $font-bgc
+                opacity: 0
+                tranisition: .6s linear
                 @include mq(tablet)
                     font-size: 16px
                 @include mq-land(tablet)
                     font-size: 16px
+            .about__description--animate
+                opacity: 1
     .about__wrapper
         @include flex(center,center,column)
         width: 90%
-        
         .about__text-wrap
             @include flex(center,center,column)
             margin: 10px auto
+            transform: translateY(10vh)
+            transition: .6s ease-in
+        .about__text-wrap--animate
+            opacity: 1
+            transform: translate(0)
             .about__me-header
                 font-family: $family-raleway
                 font-size: 20px
