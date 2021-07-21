@@ -6,9 +6,10 @@
         @include h2-wrapper
         .about__h2
             @include h2-style
-            transform: translate(20vw)
-            transition: .5s linear
-            opacity: 0
+            @include mq-land(tablet-wide)
+                transform: translate(20vw)
+                transition: .5s linear
+                opacity: 0
             &::after
                 @include h2-after
                 @include mq(tablet)
@@ -46,20 +47,16 @@
                 height: 80px
                 background-color: $tone-color
                 clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0)
-                transform: rotateY(80deg)
-                opacity: 0
-                transition: .7s linear
-                &:nth-of-type(2)
-                    transition-delay: 2s
                 @include mq(tablet)
                     width: 120px
                     height: 120px
                 @include mq-land(tablet)
                     width: 120px
                     height: 120px
-            .about__six-angles--animate
-                opacity: 1
-                transform: rotateY(0)
+                @include mq-land(tablet-wide)
+                    transform: rotateY(80deg)
+                    opacity: 0
+                    transition: .7s linear
                 .about__six-angles-icon
                     color: $white-color
                     font-size: 30px
@@ -67,19 +64,23 @@
                         font-size: 42px
                     @include mq-land(tablet)
                         font-size: 42px
+            .about__six-angles--animate
+                opacity: 1
+                transform: rotateY(0)
             .about__caption
                 margin: 10px auto 5px auto
                 font-family: $family-raleway
                 font-size: 16px
                 font-weight: bold
-                
-                opacity: 0
-                tranisition: .5s linear
-                color: $white-color
+                color: $font-bgc
                 @include mq(tablet)
                     font-size: 24px
                 @include mq-land(tablet)
                     font-size: 24px
+                @include mq-land(tablet-wide)
+                    opacity: 0
+                    tranisition: .5s linear
+                    color: $white-color
             .about__caption--animate
                 opacity: 1
                 color: $font-bgc
@@ -89,12 +90,13 @@
                 font-size: 11px
                 text-align: center
                 color: $font-bgc
-                opacity: 0
                 tranisition: .6s linear
                 @include mq(tablet)
                     font-size: 16px
                 @include mq-land(tablet)
                     font-size: 16px
+                @include mq-land(tablet-wide)
+                    opacity: 0
             .about__description--animate
                 opacity: 1
     .about__wrapper
@@ -103,8 +105,11 @@
         .about__text-wrap
             @include flex(center,center,column)
             margin: 10px auto
-            transform: translateY(10vh)
+            text-align: center
             transition: .6s ease-in
+            @include mq-land(tablet-wide)
+                transform: translateY(10vh)
+                opacity: 0
         .about__text-wrap--animate
             opacity: 1
             transform: translate(0)

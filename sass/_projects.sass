@@ -6,8 +6,15 @@
         @include h2-wrapper
         .projects__h2
             @include h2-style
+            @include mq-land(tablet-wide)
+                transition: .5s ease-in-out
+                transform: translateX(30vw)
+                opacity: 0
             &::after
                 @include h2-after
+        .projects__h2--animate
+            transform: translateX(0)
+            opacity: 1
     .projects__search
         @include flex(space-around, center, row)
         
@@ -29,12 +36,18 @@
             color: $font-bgc
             @include mq(tablet)
                 font-size: 0.9em
+        
         .projects__name
             @include flex(center, center, row)
             width: 100%
             height: 50%
             transition: 0.3s ease-in-out
             cursor: pointer
+            @include mq-land(tablet-wide)
+                opacity: 0
+                transition: 1s linear
+        .projects__name--animate
+            opacity: 1
         .projects__name--active-color
             color: $white-color
             height: 100%
@@ -42,7 +55,7 @@
             
     .projects__wrapp
         @include flex(center, center, column)
-        width: 95%
+        width: 100%
         margin: 0 auto
         transition: 0.4s ease-in-out
         flex-wrap: wrap
@@ -65,35 +78,37 @@
             position: relative
             top: 0
             left: 0
-            width: 100%
-            height: 220px
+            min-width: 400px
+            height: 240px
             overflow: hidden
             opacity: 1
             transition: 0.4s ease-in-out
-            margin:  0 
+            margin: 0
             @include mq(tablet)
-                width: 50%
+                min-width: 50%
+                height: 270px
             @include mq(tablet-wide)
-                height: 250px
+                height: 290px
             @include mq-land(phone)
-                width: 50%
+                min-width: 50%
             @include mq-land(phablet)
-                height: 240px
+                height: 200px
+            @include mq-land(tablet-wide)
+                opacity: 0
+                transform: translateY(30vh)  
             @include mq-land(desktop)
-                width: 33.333%
+                min-width: 33.333%
+                height: 220px
             @include mq-land(desktop-wide)
-                height: 300px
-            
-            &:hover
-                
+                height: 260px   
+            &:hover  
                 background-image: none
                 background-color: #f5f5f5
             &:hover .projects__title
                 top: 20% 
             &:hover .projects__learn-more
                 top: 60%
-            
-                  
+     
             .projects__title
                 @include flex(center, center,column)
                 position: absolute
@@ -102,7 +117,7 @@
                 transform: translate(-50%, -50%)
                 margin: 0 auto 20% auto
                 transition: 0.5s ease-in-out
-                
+                z-index: 1
                 .projects__h3
                     color: $bgc-color
                     font-weight: bold
@@ -212,6 +227,9 @@
                     .project__icon
                         font-size: 1.8em
                         color: $font-color
+        .projects__project--animate
+            transform: translateY(0)
+            opacity: 1
         .project__full--display-none
             visibility: hidden
             display: none

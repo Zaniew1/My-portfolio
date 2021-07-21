@@ -610,11 +610,6 @@ body .main {
   font-weight: bold;
   position: relative;
   padding-bottom: 15px;
-  -webkit-transform: translate(20vw);
-          transform: translate(20vw);
-  -webkit-transition: .5s linear;
-  transition: .5s linear;
-  opacity: 0;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -632,6 +627,16 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 1248px) {
   .about .about__header .about__h2 {
     font-size: 48px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .about .about__header .about__h2 {
+    -webkit-transform: translate(20vw);
+            transform: translate(20vw);
+    -webkit-transition: .5s linear;
+    transition: .5s linear;
+    opacity: 0;
   }
 }
 
@@ -779,16 +784,6 @@ body .main {
   background-color: #45a29e;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
-  -webkit-transform: rotateY(80deg);
-          transform: rotateY(80deg);
-  opacity: 0;
-  -webkit-transition: .7s linear;
-  transition: .7s linear;
-}
-
-.about .about__wrap .about__pros .about__six-angles:nth-of-type(2) {
-  -webkit-transition-delay: 2s;
-          transition-delay: 2s;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -802,6 +797,33 @@ body .main {
   .about .about__wrap .about__pros .about__six-angles {
     width: 120px;
     height: 120px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .about .about__wrap .about__pros .about__six-angles {
+    -webkit-transform: rotateY(80deg);
+            transform: rotateY(80deg);
+    opacity: 0;
+    -webkit-transition: .7s linear;
+    transition: .7s linear;
+  }
+}
+
+.about .about__wrap .about__pros .about__six-angles .about__six-angles-icon {
+  color: #fff;
+  font-size: 30px;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__wrap .about__pros .about__six-angles .about__six-angles-icon {
+    font-size: 42px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .about .about__wrap .about__pros .about__six-angles .about__six-angles-icon {
+    font-size: 42px;
   }
 }
 
@@ -811,31 +833,12 @@ body .main {
           transform: rotateY(0);
 }
 
-.about .about__wrap .about__pros .about__six-angles--animate .about__six-angles-icon {
-  color: #fff;
-  font-size: 30px;
-}
-
-@media only screen and (orientation: portrait) and (min-width: 768px) {
-  .about .about__wrap .about__pros .about__six-angles--animate .about__six-angles-icon {
-    font-size: 42px;
-  }
-}
-
-@media only screen and (orientation: landscape) and (min-width: 768px) {
-  .about .about__wrap .about__pros .about__six-angles--animate .about__six-angles-icon {
-    font-size: 42px;
-  }
-}
-
 .about .about__wrap .about__pros .about__caption {
   margin: 10px auto 5px auto;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: bold;
-  opacity: 0;
-  tranisition: .5s linear;
-  color: #fff;
+  color: #616161;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -847,6 +850,14 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 768px) {
   .about .about__wrap .about__pros .about__caption {
     font-size: 24px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .about .about__wrap .about__pros .about__caption {
+    opacity: 0;
+    tranisition: .5s linear;
+    color: #fff;
   }
 }
 
@@ -861,7 +872,6 @@ body .main {
   font-size: 11px;
   text-align: center;
   color: #616161;
-  opacity: 0;
   tranisition: .6s linear;
 }
 
@@ -874,6 +884,12 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 768px) {
   .about .about__wrap .about__pros .about__description {
     font-size: 16px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .about .about__wrap .about__pros .about__description {
+    opacity: 0;
   }
 }
 
@@ -913,10 +929,17 @@ body .main {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 10px auto;
-  -webkit-transform: translateY(10vh);
-          transform: translateY(10vh);
+  text-align: center;
   -webkit-transition: .6s ease-in;
   transition: .6s ease-in;
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .about .about__wrapper .about__text-wrap {
+    -webkit-transform: translateY(10vh);
+            transform: translateY(10vh);
+    opacity: 0;
+  }
 }
 
 .about .about__wrapper .about__text-wrap--animate {
@@ -1018,7 +1041,23 @@ body .main {
   }
 }
 
-.contact .contact__header .contact__h2::after {
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .contact .contact__header .contact__h2 {
+    -webkit-transition: .6s linear;
+    transition: .6s linear;
+    -webkit-transform: translateY(-20vh);
+            transform: translateY(-20vh);
+    opacity: 0;
+  }
+}
+
+.contact .contact__header .contact__h2--animate {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.contact .contact__header .contact__h2--animate::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1032,21 +1071,21 @@ body .main {
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
-  .contact .contact__header .contact__h2::after {
+  .contact .contact__header .contact__h2--animate::after {
     width: 120px;
     height: 5px;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 768px) {
-  .contact .contact__header .contact__h2::after {
+  .contact .contact__header .contact__h2--animate::after {
     width: 120px;
     height: 5px;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1248px) {
-  .contact .contact__header .contact__h2::after {
+  .contact .contact__header .contact__h2--animate::after {
     width: 150px;
   }
 }
@@ -1094,6 +1133,11 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 1024px) {
   .contact .contact__wrap .contact__form .contact__form-header {
+    -webkit-transition: .6s linear;
+    transition: .6s linear;
+    -webkit-transform: translateX(-30vw);
+            transform: translateX(-30vw);
+    opacity: 0;
     font-size: 16px;
   }
 }
@@ -1103,6 +1147,12 @@ body .main {
     font-size: 18px;
     margin-bottom: 15px;
   }
+}
+
+.contact .contact__wrap .contact__form .contact__form-header--animate {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 .contact .contact__wrap .contact__form .contact__input {
@@ -1116,6 +1166,7 @@ body .main {
   font-family: "Raleway", sans-serif;
   padding: 10px 10px;
   color: #66fcf1;
+  opacity: 1;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -1140,6 +1191,11 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 1024px) {
   .contact .contact__wrap .contact__form .contact__input {
+    opacity: 0;
+    -webkit-transform: translateX(30vw);
+            transform: translateX(30vw);
+    -webkit-transition: .6s linear;
+    transition: .6s linear;
     width: 50%;
     min-height: 50px;
   }
@@ -1220,6 +1276,12 @@ body .main {
   }
 }
 
+.contact .contact__wrap .contact__form .contact__input--animate {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 .contact .contact__wrap .contact__form .contact__text {
   background-color: #616161;
   font-family: "Raleway", sans-serif;
@@ -1258,6 +1320,11 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 1024px) {
   .contact .contact__wrap .contact__form .contact__text {
+    opacity: 0;
+    -webkit-transform: translateX(30vw);
+            transform: translateX(30vw);
+    -webkit-transition: .6s linear;
+    transition: .6s linear;
     width: 50%;
     min-height: 280px;
   }
@@ -1336,6 +1403,12 @@ body .main {
     font-size: 1.2rem;
     opacity: 0.6;
   }
+}
+
+.contact .contact__wrap .contact__form .contact__text--animate {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .contact .contact__wrap .contact__form .contact__submit {
@@ -1422,6 +1495,11 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 1024px) {
   .contact .contact__wrap .contact__form .contact__submit {
+    opacity: 0;
+    -webkit-transition: .6s linear;
+    transition: .6s linear;
+    -webkit-transform: translateY(30vh);
+            transform: translateY(30vh);
     width: 35%;
     font-size: 1rem;
     font-weight: bold;
@@ -1438,6 +1516,12 @@ body .main {
 .contact .contact__wrap .contact__form .contact__submit:hover {
   background-color: #66fcf1;
   border: none;
+}
+
+.contact .contact__wrap .contact__form .contact__submit--animate {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .footer {
@@ -1652,6 +1736,16 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .projects .projects__header .projects__h2 {
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    -webkit-transform: translateX(30vw);
+            transform: translateX(30vw);
+    opacity: 0;
+  }
+}
+
 .projects .projects__header .projects__h2::after {
   content: "";
   position: absolute;
@@ -1682,6 +1776,12 @@ body .main {
   .projects .projects__header .projects__h2::after {
     width: 150px;
   }
+}
+
+.projects .projects__header .projects__h2--animate {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 .projects .projects__search {
@@ -1768,6 +1868,18 @@ body .main {
   cursor: pointer;
 }
 
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .projects .projects__search .projects__name {
+    opacity: 0;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+  }
+}
+
+.projects .projects__search .projects__name--animate {
+  opacity: 1;
+}
+
 .projects .projects__search .projects__name--active-color {
   color: #fff;
   height: 100%;
@@ -1788,7 +1900,7 @@ body .main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
@@ -1875,8 +1987,8 @@ body .main {
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 220px;
+  min-width: 400px;
+  height: 240px;
   overflow: hidden;
   opacity: 1;
   -webkit-transition: 0.4s ease-in-out;
@@ -1886,37 +1998,47 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .projects .projects__wrapp .projects__project {
-    width: 50%;
+    min-width: 50%;
+    height: 270px;
   }
 }
 
 @media only screen and (orientation: portrait) and (min-width: 1024px) {
   .projects .projects__wrapp .projects__project {
-    height: 250px;
+    height: 290px;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 530px) {
   .projects .projects__wrapp .projects__project {
-    width: 50%;
+    min-width: 50%;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 640px) {
   .projects .projects__wrapp .projects__project {
-    height: 240px;
+    height: 200px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .projects .projects__wrapp .projects__project {
+    opacity: 0;
+    -webkit-transform: translateY(30vh);
+            transform: translateY(30vh);
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1248px) {
   .projects .projects__wrapp .projects__project {
-    width: 33.333%;
+    min-width: 33.333%;
+    height: 220px;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1440px) {
   .projects .projects__wrapp .projects__project {
-    height: 300px;
+    height: 260px;
   }
 }
 
@@ -1955,6 +2077,7 @@ body .main {
   margin: 0 auto 20% auto;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  z-index: 1;
 }
 
 .projects .projects__wrapp .projects__project .projects__title .projects__h3 {
@@ -2240,6 +2363,12 @@ body .main {
 .projects .projects__wrapp .project__full .project__description .project__close .project__icon {
   font-size: 1.8em;
   color: #c5c6c7;
+}
+
+.projects .projects__wrapp .projects__project--animate {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .projects .projects__wrapp .project__full--display-none {

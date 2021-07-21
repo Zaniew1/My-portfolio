@@ -200,61 +200,123 @@ const showReactProject = function(){
     document.querySelectorAll('.project__js').forEach(project => project.classList.add('projects__project--hide')) 
 }
 
+// ANIMACJE SLIDE IN NA SCROLLU
 
 document.addEventListener('scroll', ()=>{
-    const windowScrollValue = window.scrollY;
-    const windowHeight = window.innerHeight;
+    // ANIMACJE TYLKO NA WIĘKSZYCH EKRANACH
+    if(window.innerWidth >= 1024 )
+    {
+        // WARTOŚCI OKNA PRZEGLĄDARKI: 
+        // WARTOŚĆ SCROLLA (GÓRNA LINIA OKNA)
+        const windowScrollValue = window.scrollY;
+        // WYSOKOŚĆ OKNA PRZEGLĄDARKI
+        const windowHeight = window.innerHeight;
 
-    const aboutH2 = document.querySelector('.about__h2');
-    const aboutHeaderHeight = document.querySelector('.about__header').offsetHeight;
-    const distanceAboutH2FromTop = aboutH2.offsetTop;
+        // ANIMACJA HEADERU W SEKSCJI ABOUT
+        const aboutH2 = document.querySelector('.about__h2');
+        const aboutHeaderHeight = document.querySelector('.about__header').offsetHeight;
+        const distanceAboutH2FromTop = aboutH2.offsetTop;
+        // WARTOŚĆ SCROLLA POWINNA BYĆ WIĘKSZA OD (ODLEGŁOŚCI ELEMENTU OD GORY OKNA PRZEGLĄDARKI - WYSOKOŚĆ OKNA PRZEGLĄDARKI + WYSOKOŚĆ TEGO ELEMENTU)
+        if(windowScrollValue > distanceAboutH2FromTop - windowHeight + aboutHeaderHeight ){
+            aboutH2.classList.add('about__h2--animate');   
+        }
+        // ANIMACJA 6 KĄTÓW W SEKCJI ABOUT
+        const sixAngles = [...document.querySelectorAll('.about__six-angles')]
+        const aboutWrap = document.querySelector('.about__wrap')
+        const aboutWrapHeight = aboutWrap.offsetHeight;
+        const distanceSixAnglesFromTop = aboutWrap.offsetTop;
+        if(windowScrollValue > distanceSixAnglesFromTop - windowHeight + aboutWrapHeight ){
+            sixAngles.forEach(angle => angle.classList.add('about__six-angles--animate'));
+            // OPÓŹNIANIE ANIMACJI 
+            sixAngles.forEach((angle, index) => {
+                let seconds = index/3;
+                angle.style.transitionDelay = `${seconds}s`;
+            })
+        }
+        // ANIMACJA NAGŁÓWKÓW I OPISÓW POD 6-KĄTAMI W SEKCJI ABOUT
+        const aboutCaption = [...document.querySelectorAll('.about__caption')];
+        const aboutDescription = [...document.querySelectorAll('.about__description')];
+        if(windowScrollValue > distanceSixAnglesFromTop - windowHeight + aboutWrapHeight + 100 ){
+            aboutCaption.forEach(caption => caption.classList.add('about__caption--animate'))
+            // OPÓŹNIANIE ANIMACJI 
+            aboutCaption.forEach((caption, index) => {
+                let seconds = index/4;
+                caption.style.transitionDelay = `${seconds}s`;
+            })
+            aboutDescription.forEach(description => description.classList.add('about__description--animate'))
+            aboutDescription.forEach((description, index) => {
+                let seconds = index/4;
+                description.style.transitionDelay = `${seconds}s`;
+            })
+        }
+        // ANIMACJA KIM JESTEM W SEKCJI ABOUT
+        const whoAmI = document.querySelector('.about__text-wrap');
+        const whoAmIWrapper = document.querySelector('.about__wrapper').offsetHeight;
+        const distanceWhoAmIFromTop = whoAmI.offsetTop;
+        if(windowScrollValue > distanceWhoAmIFromTop - windowHeight + whoAmIWrapper ){
+            whoAmI.classList.add('about__text-wrap--animate');
 
-    if(windowScrollValue > distanceAboutH2FromTop - windowHeight + aboutHeaderHeight ){
-        aboutH2.classList.add('about__h2--animate');   
+        }
+        // ANIMACJA HEADERU W SEKCJI PROJECTS
+        const projectsH2 = document.querySelector('.projects__h2');
+        const projectsHeader = document.querySelector('.projects__header').offsetHeight;
+        const distanceProjectsH2FromTop = projectsH2.offsetTop;
+        if(windowScrollValue > distanceProjectsH2FromTop - windowHeight + projectsHeader ){
+            projectsH2.classList.add('projects__h2--animate');
+        }
+
+        // ANIMACJA MENU WYBORU TECHNOLOGII W SEKCJI PROJECTS
+        const projectsName = [...document.querySelectorAll('.projects__name')];
+        const projectsSearch = document.querySelector('.projects__search')
+        const projectsSearchHeight = projectsSearch.offsetHeight;
+        const distanceProjectsSearchFromTop = projectsSearch.offsetTop;
+        if(windowScrollValue > distanceProjectsSearchFromTop - windowHeight + projectsHeader + projectsSearchHeight ){
+            projectsName.forEach(name => name.classList.add('projects__name--animate'));
+        }
+        // ANIMACJA PROJEKTÓW W SEKCJI PROJECTS
+        const projectsProject = [...document.querySelectorAll('.projects__project')];
+        const firstProject = document.querySelector('.projects__project');
+        const firstProjectHeight = firstProject.offsetHeight;
+        const distanceFirstProjectFromTop = firstProject.offsetTop;
+        if(windowScrollValue > distanceFirstProjectFromTop - windowHeight  + firstProjectHeight ){
+            projectsProject.forEach(project => project.classList.add('projects__project--animate'));
+            // OPÓŹNIANIE ANIMACJI 
+            projectsProject.forEach((project, index) => {
+                let seconds = index/20;
+                project.style.transitionDelay = `${seconds}s`;
+            })
+        }
+        // ANIMACJA HEADERA W SEKCJI CONTACT
+        const contactH2 = document.querySelector('.contact__h2');
+        const contactHeaderHeight = document.querySelector('.contact__header').offsetHeight;
+        const distanceContactH2FromTop = contactH2.offsetTop;
+        if(windowScrollValue > distanceContactH2FromTop - windowHeight + contactHeaderHeight ){
+            contactH2.classList.add('contact__h2--animate');
+        }
+        // ANIMACJA "JEŻELI MASZ PYTANIA" W SEKCJI CONTACT
+        const contactAsk = document.querySelector('.contact__form-header');
+        const contactAskHeight = document.querySelector('.contact__form-header').offsetHeight;
+        const distanceContactAskFromTop = contactAsk.offsetTop;
+        if(windowScrollValue > distanceContactAskFromTop - windowHeight + contactAskHeight ){
+            contactAsk.classList.add('contact__form-header--animate');
+        }
+        // ANIMACJA INPUTÓW W SEKCJI CONTACT
+        const contactInputs = [...document.querySelectorAll('.contact__input')];
+        const contactTextArea = document.querySelector('.contact__text');
+        const contactTextAreaHeight = contactTextArea.offsetHeight;
+        const distanceContactTextAreaFromTop = contactTextArea.offsetTop;
+        if(windowScrollValue > distanceContactTextAreaFromTop - windowHeight + contactTextAreaHeight ){
+            contactInputs.forEach(input=> input.classList.add('contact__input--animate'));
+            contactTextArea.classList.add('contact__text--animate');
+        }
+        // ANIMACJA SUBMITA W SEKCJI CONTACT
+        const contactSubmit = document.querySelector('.contact__submit');
+        const contactSubmitHeight = contactSubmit.offsetHeight;
+        const distanceContactSubmitFromTop = contactSubmit.offsetTop;
+        if(windowScrollValue > distanceContactSubmitFromTop - windowHeight + (contactSubmitHeight * 2) ){
+            contactSubmit.classList.add('contact__submit--animate');
+        }
     }
-
-    const sixAngles = [...document.querySelectorAll('.about__six-angles')]
-    const aboutWrap = document.querySelector('.about__wrap')
-    const aboutWrapHeight = document.querySelector('.about__wrap').offsetHeight;
-    const distanceSixAnglesFromTop = aboutWrap.offsetTop;
-
-    if(windowScrollValue > distanceSixAnglesFromTop - windowHeight + aboutWrapHeight ){
-        sixAngles.forEach(angle => angle.classList.add('about__six-angles--animate'));
-        sixAngles.forEach((angle, index) => {
-            let seconds = index/3;
-            angle.style.transitionDelay = `${seconds}s`;
-        })
-    }
-    const aboutCaption = [...document.querySelectorAll('.about__caption')];
-    const aboutDescription = [...document.querySelectorAll('.about__description')];
-
-    if(windowScrollValue > distanceSixAnglesFromTop - windowHeight + aboutWrapHeight + 100 ){
-        aboutCaption.forEach(caption => caption.classList.add('about__caption--animate'))
-        aboutCaption.forEach((caption, index) => {
-            let seconds = index/4;
-            caption.style.transitionDelay = `${seconds}s`;
-        })
-        aboutDescription.forEach(description => description.classList.add('about__description--animate'))
-        aboutDescription.forEach((description, index) => {
-            let seconds = index/4;
-            description.style.transitionDelay = `${seconds}s`;
-        })
-
-
-    }
-
-
-
-
-    const whoAmI = document.querySelector('.about__text-wrap');
-    const whoAmIWrapper = document.querySelector('.about__wrapper').offsetHeight;
-    const distanceWhoAmIFromTop = whoAmI.offsetTop;
-
-    if(windowScrollValue > distanceWhoAmIFromTop - windowHeight + whoAmIWrapper ){
-        whoAmI.classList.add('about__text-wrap--animate');
-
-    }
-
 })
 
 
