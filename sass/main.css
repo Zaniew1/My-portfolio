@@ -2185,6 +2185,8 @@ body .main {
 }
 
 .projects .projects__wrapp .project__full {
+  display: none;
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -2232,11 +2234,21 @@ body .main {
 }
 
 .projects .projects__wrapp .project__full .project__pictures .project__arrow .project__arrow-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 100%;
   color: #fff;
   font-size: 18px;
   -webkit-transition: 0.2s ease-in-out;
@@ -2371,9 +2383,9 @@ body .main {
   opacity: 1;
 }
 
-.projects .projects__wrapp .project__full--display-none {
-  visibility: hidden;
-  display: none;
+.projects .projects__wrapp .project__full--display-block {
+  visibility: visible;
+  display: block;
 }
 
 .projects .projects__wrapp .project__css {

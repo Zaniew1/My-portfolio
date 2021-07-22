@@ -141,6 +141,8 @@
                 transform: translate(-50%, -50%)
                 transition: 0.5s ease-in-out
         .project__full
+            display: none
+            visibility: hidden
             position: fixed 
             top: 0
             left: 0 
@@ -173,9 +175,12 @@
                     &:hover
                         background-color: $tone-color
                     .project__arrow-icon
-                        @include position-center
+                        @include flex(center, center, row)
+                        width: 100%
+                        height: 100%
                         color: #fff
                         font-size: 18px
+                        
                         transition: 0.2s ease-in-out
             .project__description
                 width: 100%
@@ -230,9 +235,9 @@
         .projects__project--animate
             transform: translateY(0)
             opacity: 1
-        .project__full--display-none
-            visibility: hidden
-            display: none
+        .project__full--display-block
+            visibility: visible
+            display: block
         .project__css
             @include pictureJpg(brows-intro)
 

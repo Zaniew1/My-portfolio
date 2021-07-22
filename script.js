@@ -135,49 +135,84 @@ navToggle.addEventListener("click", ()=>{
     })
 
 
-document.querySelector('.projects__learn-more--one').addEventListener('click', ()=>{
-    document.querySelector('.project__full').classList.remove('project__full--display-none')
-})
 
-document.querySelector('.project__close').addEventListener('click', ()=> {
-    document.querySelector('.project__full').classList.add('project__full--display-none')
-})
+// OTWORZENIE PROJEKTU 
+const showProject = function(){
+   const projectShow =  [...document.querySelectorAll('.project__full')];
+    projectShow.forEach((show, index)=>{
+        show.classList.add('project__full--display-block')
+        console.log(show)
+    })
 
 
-const slideList = [{
-    img: "img/brows.jpg",
-   },
-   {
-    img: "img/brows1.jpg",
-   },
-   {
-    img: "img/brows2.jpg",
-   }];
+    const projectShowIndex = projectShow.findIndex(show => show.classList.contains('project__full--display-block'));
+    projectShow[projectShowIndex].classList.add('project__full--display-block')
+    console.log(projectShowIndex)
+}
+
+
+// SLIDER POKAZUJĄCY ZDJĄCIA PROJEKTU 
+
+
+
+const slideList = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+const slideList1 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+const slideList2 = ["img/brows.jpg", "img/me.jpg", "img/brows2.jpg"]
+const slideList3 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+const slideList4 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+const slideList5 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+const slideList6 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+const slideList7 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+const slideList8 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+
+
 let active = 0;
-const sliderPicture = document.querySelector('.project__slider');
+const sliderPicture = [...document.querySelectorAll('.project__slider')];
+const projectIndexs = [...document.querySelectorAll('.project__full')]
 const leftArrow = document.querySelector('.project__arrow-icon--left');
 const rightArrow = document.querySelector('.project__arrow-icon--right');
-const changeSlideRight = ()=>{
+
+
+const findIndex = ()=>{
+    projectIndexs.findIndex(index => index.classList.contains('project__full--display-block'))
+
+}
+
+// WYWOŁANIE TYCH FUNKCJI JEST NA ONCLICKU W HTMLU 
+// ZMIENIANIE SLAJDÓW ZA POMOCĄ STRZŁAŁEK
+const changeSlideRight = function(){ 
+
     active++;
-    
     if(active === slideList.length){
         active = 0;
     }
-    sliderPicture.src = slideList[active].img
+
+    sliderPicture.forEach(slider => slider.src = slideList2[active])
+ 
+
+
 }
-const changeSlideLeft = ()=>{
+const changeSlideLeft = function(){
+
     active--;
+
     if(active < 0){
-        active = slideList.length -1;
+        active =  slideList.length - 1;
     }
-    sliderPicture.src = slideList[active].img
+    sliderPicture.forEach(slider => slider.src = slideList2[active])
+
+
+}
+
+// ZAMKNIĘCIE PROJEKTU
+const turnOffProject = function(){
+    document.querySelector('.project__full').classList.remove('project__full--display-block');
 }
 
 
 
 
-
-
+// Funkcje filtrujące projekty przez przyciśnięcie odpowiedniego przycisku w sekcji projects
 const showAllProject = function(){
     document.querySelectorAll('.project__css').forEach(project => project.classList.remove('projects__project--hide'))
     document.querySelectorAll('.project__js').forEach(project => project.classList.remove('projects__project--hide'))
@@ -214,7 +249,9 @@ document.addEventListener('scroll', ()=>{
 
         // ANIMACJA HEADERU W SEKSCJI ABOUT
         const aboutH2 = document.querySelector('.about__h2');
+        // WYSOKOŚĆ ELEMENTU HEADER
         const aboutHeaderHeight = document.querySelector('.about__header').offsetHeight;
+        // ODLEGŁOŚĆ ELEMENTU OD GORY OKNA PRZEGLĄDARKI
         const distanceAboutH2FromTop = aboutH2.offsetTop;
         // WARTOŚĆ SCROLLA POWINNA BYĆ WIĘKSZA OD (ODLEGŁOŚCI ELEMENTU OD GORY OKNA PRZEGLĄDARKI - WYSOKOŚĆ OKNA PRZEGLĄDARKI + WYSOKOŚĆ TEGO ELEMENTU)
         if(windowScrollValue > distanceAboutH2FromTop - windowHeight + aboutHeaderHeight ){
