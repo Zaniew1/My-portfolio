@@ -1,5 +1,5 @@
 .contact
-    @include pictureJpg(wallpaper)
+    background-color: #252934
     .contact__header
         @include h2-wrapper
         .contact__h2
@@ -109,7 +109,9 @@
                 @include mq-land(tablet-wide)
                     opacity: 0
                     transform: translateX(30vw)
-                    transition: .6s linear
+                    transition: opacity .6s linear
+                    transition: transform .6s linear
+                  
                     width: 50%
                     min-height: 280px
                 @include mq-land(desktop)

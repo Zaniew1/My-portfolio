@@ -85,6 +85,11 @@
                 font-size: 1.2rem
             @include mq-land(desktop)
                 font-size: 1.4rem
+        .front__cursor
+            color: $bright-color
+            font-size: 14px
+            opacity: 1
+            transition: .4s
         .front__button
             @include button-style
             @include mq (tablet)
@@ -95,4 +100,5 @@
             &:hover
                 background-color: $tone-color
                 border: none
-
+        .front__cursor--animate
+            opacity: 1

@@ -1,3 +1,4 @@
+const nav = document.querySelector('.nav')
 const navWrapper = document.querySelector('.nav__bar');
 const navToggle = document.querySelector('.nav__toggle');
 navToggle.addEventListener("click", ()=>{
@@ -134,22 +135,24 @@ navToggle.addEventListener("click", ()=>{
         reactProjects.classList.add('projects__name--active-color');
     })
 
+    const blur = document.querySelector('.blur')
 
-
-// OTWORZENIE PROJEKTU 
-const showProject = function(){
-   const projectShow =  [...document.querySelectorAll('.project__full')];
-    projectShow.forEach((show, index)=>{
-        show.classList.add('project__full--display-block')
-        console.log(show)
+// OTWORZENIE PROJEKTU
+// TABLICA Z WSZYSTKIMI BUTTONAMI 
+const projectMore = [...document.querySelectorAll('.projects__learn-more')];
+// TABLICA Z WSZYSTKIMI PROJEKTAMI
+const projectShow =  [...document.querySelectorAll('.project__full')];
+projectMore.forEach((project, index) => {
+    // TU JEST USTAWIONY EVEN LISTENER NA KAŻDYM BUTTONIE, DAJE INDEX TEGO BUTTONA,
+    // A NASTĘPNIE NADAJE KLASĘ DLA PROJECT__FULL Z INDEXEM BUTTONA,
+    // ABY OTWORZYĆ KONKRETNY PROJECT 
+    project.addEventListener('click', ()=> {
+    projectShow[index].classList.add('project__full--display-block');
+    blur.classList.add('blur--active');
+    nav.classList.add('nav--active');
+    //  TU JEST NADAWANE ROZMYCIE I ZACIEMNIENIE TŁA
     })
-
-
-    const projectShowIndex = projectShow.findIndex(show => show.classList.contains('project__full--display-block'));
-    projectShow[projectShowIndex].classList.add('project__full--display-block')
-    console.log(projectShowIndex)
-}
-
+    })
 
 // SLIDER POKAZUJĄCY ZDJĄCIA PROJEKTU 
 
@@ -163,7 +166,7 @@ const slideList4 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
 const slideList5 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
 const slideList6 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
 const slideList7 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-const slideList8 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+const slideList8 = ["img/brows.jpg", "wallpaper.jpg", "img/brows2.jpg"]
 
 
 let active = 0;
@@ -173,41 +176,39 @@ const leftArrow = document.querySelector('.project__arrow-icon--left');
 const rightArrow = document.querySelector('.project__arrow-icon--right');
 
 
-const findIndex = ()=>{
-    projectIndexs.findIndex(index => index.classList.contains('project__full--display-block'))
 
-}
 
 // WYWOŁANIE TYCH FUNKCJI JEST NA ONCLICKU W HTMLU 
 // ZMIENIANIE SLAJDÓW ZA POMOCĄ STRZŁAŁEK
 const changeSlideRight = function(){ 
-
     active++;
     if(active === slideList.length){
         active = 0;
     }
-
     sliderPicture.forEach(slider => slider.src = slideList2[active])
- 
-
-
 }
+
+
 const changeSlideLeft = function(){
-
     active--;
-
     if(active < 0){
         active =  slideList.length - 1;
     }
     sliderPicture.forEach(slider => slider.src = slideList2[active])
-
-
 }
 
 // ZAMKNIĘCIE PROJEKTU
 const turnOffProject = function(){
-    document.querySelector('.project__full').classList.remove('project__full--display-block');
+    [...document.querySelectorAll('.project__full')].forEach(project => project.classList.remove('project__full--display-block'));
+    blur.classList.remove('blur--active');
+    nav.classList.remove('nav--active');
 }
+
+blur.addEventListener('click', ()=>{
+    blur.classList.remove('blur--active');
+    nav.classList.remove('nav--active');
+    [...document.querySelectorAll('.project__full')].forEach(project => project.classList.remove('project__full--display-block'));
+})
 
 
 
@@ -379,3 +380,28 @@ window.addEventListener("scroll", () =>{
         }
     }
 })
+
+
+// ANIMACJA TEKSTU W SEKCJI FRONT 
+const containerTextH2 = document.querySelector('.front__text-h2');
+const h2Text = 'Junior Front-End Developer. ';
+const timeOfAnimationH2 = 70;
+const timeOfH2AnimationDelay = 1000
+let indexTextH2 = 0;
+if(window.innerWidth >= 768){
+    const letterH2AnimationDelay = ()=>{
+        const letterH2Animation = ()=>{
+        containerTextH2.textContent += h2Text[indexTextH2 ];
+        indexTextH2 ++
+        if(indexTextH2  === h2Text.length) {
+            clearInterval(indexH2Typing);
+        }}
+        const indexH2Typing = setInterval(letterH2Animation, timeOfAnimationH2)
+        clearInterval(indexH2Delay);
+    }
+    const indexH2Delay = setInterval(letterH2AnimationDelay, timeOfH2AnimationDelay)
+}
+else
+{
+    containerTextH2.textContent =  h2Text
+}

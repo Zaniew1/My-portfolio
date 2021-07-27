@@ -1,7 +1,7 @@
 .footer
     @include flex(center, center, column)
     position: relative
-    @include pictureJpg(wallpaper)
+    background-color: #1b242f
     border-top: 1px solid $bright-color
     scroll-behavior: auto
     .footer__go-up
@@ -37,10 +37,14 @@
             width: 30%
         .footer__social
             position: relative
+            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0)
             width: 3.5em
             height: 3.5em
             background-color: #2d2e38
             z-index: 4
+            @include mq-land(desktop)
+                width: 4.5em
+                height: 4.5em
             &:hover .footer__icon
                 font-size: 32px
                 color: $bright-color
