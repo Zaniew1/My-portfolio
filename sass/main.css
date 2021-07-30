@@ -944,8 +944,8 @@ body .main {
   bottom: 50%;
   right: 50%;
   opacity: 1;
-  -webkit-animation: myOrbit 4s infinite linear;
-          animation: myOrbit 4s infinite linear;
+  -webkit-animation: myOrbit 8s infinite linear;
+          animation: myOrbit 8s infinite linear;
 }
 
 .about .about__wrapper .about__text-wrap {
