@@ -102,6 +102,19 @@
     .about__wrapper
         @include flex(center,center,column)
         width: 90%
+        height: 40vh
+        position: relative
+        .about__react
+            @include picturePng(react)
+            width: 80px
+            height: 80px
+            position: absolute
+            transform: translate(-50%, -50%)
+            bottom: 50%
+            right: 50%
+            opacity: 1
+            animation: myOrbit 4s infinite linear
+            
         .about__text-wrap
             @include flex(center,center,column)
             margin: 10px auto

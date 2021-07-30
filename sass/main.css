@@ -487,14 +487,6 @@ body .main {
   }
 }
 
-.front .front__text .front__cursor {
-  color: #66fcf1;
-  font-size: 14px;
-  opacity: 1;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
 .front .front__text .front__button {
   width: 50%;
   height: 40px;
@@ -575,10 +567,6 @@ body .main {
 .front .front__text .front__button:hover {
   background-color: #45a29e;
   border: none;
-}
-
-.front .front__text .front__cursor--animate {
-  opacity: 1;
 }
 
 .about {
@@ -940,6 +928,24 @@ body .main {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 90%;
+  height: 40vh;
+  position: relative;
+}
+
+.about .about__wrapper .about__react {
+  background-image: url("../img/react.png");
+  background-position: center;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: 50%;
+  right: 50%;
+  opacity: 1;
+  -webkit-animation: myOrbit 4s infinite linear;
+          animation: myOrbit 4s infinite linear;
 }
 
 .about .about__wrapper .about__text-wrap {
@@ -2641,5 +2647,55 @@ body .main {
   height: 0;
   position: absolute;
   opacity: 0;
+}
+
+@-webkit-keyframes myOrbit {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(200px) rotate(0deg);
+            transform: rotate(0deg) translateY(200px) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateY(200px) rotate(-360deg);
+            transform: rotate(360deg) translateY(200px) rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes myOrbit {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(200px) rotate(0deg);
+            transform: rotate(0deg) translateY(200px) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateY(200px) rotate(-360deg);
+            transform: rotate(360deg) translateY(200px) rotate(-360deg);
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

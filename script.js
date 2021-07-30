@@ -384,7 +384,7 @@ window.addEventListener("scroll", () =>{
 
 // ANIMACJA TEKSTU W SEKCJI FRONT 
 const containerTextH2 = document.querySelector('.front__text-h2');
-const h2Text = 'Junior Front-End Developer. ';
+const h2Text = 'Junior Front-End Developer ';
 const timeOfAnimationH2 = 70;
 const timeOfH2AnimationDelay = 1000
 let indexTextH2 = 0;
