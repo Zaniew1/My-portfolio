@@ -13,6 +13,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  min-width: 320px;
 }
 
 body .blur--active {
@@ -488,13 +489,13 @@ body .main {
 }
 
 .front .front__text .front__button {
+  cursor: pointer;
   width: 50%;
   height: 40px;
   background-color: transparent;
   border: 2px solid #fff;
   color: #fff;
   font-weight: 400;
-  font-family: "Raleway", sans-serif;
   font-size: 12px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
@@ -502,7 +503,7 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .front .front__text .front__button {
-    width: 30%;
+    width: 50%;
     height: 50px;
     font-size: 0.9em;
   }
@@ -510,7 +511,6 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 1024px) {
   .front .front__text .front__button {
-    text-transform: uppercase;
     min-height: 60px;
     font-size: 1em;
   }
@@ -519,7 +519,7 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 530px) {
   .front .front__text .front__button {
     font-size: 0.6rem;
-    width: 60%;
+    width: 40%;
     margin-top: 20px;
   }
 }
@@ -527,31 +527,21 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 640px) {
   .front .front__text .front__button {
     font-size: 0.8rem;
-    width: 80%;
     min-height: 50px;
-  }
-}
-
-@media only screen and (orientation: landscape) and (min-width: 768px) {
-  .front .front__text .front__button {
-    font-size: 0.9rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1024px) {
   .front .front__text .front__button {
-    font-size: 1.2rem;
-    min-height: 70px;
-    text-transform: uppercase;
+    font-size: 0.8rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1248px) {
   .front .front__text .front__button {
     font-size: 1rem;
-    width: 70%;
+    width: 50%;
     min-height: 60px;
-    border: 2px solid #fff;
   }
 }
 
@@ -936,16 +926,138 @@ body .main {
   background-image: url("../img/react.png");
   background-position: center;
   background-size: cover;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   bottom: 50%;
   right: 50%;
-  opacity: 1;
-  -webkit-animation: myOrbit 8s infinite linear;
-          animation: myOrbit 8s infinite linear;
+  opacity: 0;
+  -webkit-animation: myOrbit 10s infinite linear;
+          animation: myOrbit 10s infinite linear;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about .about__wrapper .about__js {
+  background-image: url("../img/js.png");
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: 50%;
+  right: 50%;
+  opacity: 0;
+  -webkit-animation: myOrbit 10s infinite linear;
+          animation: myOrbit 10s infinite linear;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.about .about__wrapper .about__html {
+  background-image: url("../img/html.png");
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: 50%;
+  right: 50%;
+  opacity: 0;
+  -webkit-animation: myOrbit 10s infinite linear;
+          animation: myOrbit 10s infinite linear;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.about .about__wrapper .about__css {
+  background-image: url("../img/css.png");
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: 50%;
+  right: 50%;
+  opacity: 0;
+  -webkit-animation: myOrbit 10s infinite linear;
+          animation: myOrbit 10s infinite linear;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+
+.about .about__wrapper .about__bootstrap {
+  background-image: url("../img/bootstrap.png");
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: 50%;
+  right: 50%;
+  opacity: 0;
+  -webkit-animation: myOrbit 10s infinite linear;
+          animation: myOrbit 10s infinite linear;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+
+.about .about__wrapper .about__sass {
+  background-image: url("../img/sass.png");
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: 50%;
+  right: 50%;
+  opacity: 0;
+  -webkit-animation: myOrbit 10s infinite linear;
+          animation: myOrbit 10s infinite linear;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.about .about__wrapper .about__git {
+  background-image: url("../img/git.png");
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: 50%;
+  right: 50%;
+  opacity: 0;
+  -webkit-animation: myOrbit 10s infinite linear;
+          animation: myOrbit 10s infinite linear;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s;
 }
 
 .about .about__wrapper .about__text-wrap {
@@ -1448,13 +1560,13 @@ body .main {
 }
 
 .contact .contact__wrap .contact__form .contact__submit {
+  cursor: pointer;
   width: 50%;
   height: 40px;
   background-color: transparent;
   border: 2px solid #fff;
   color: #fff;
   font-weight: 400;
-  font-family: "Raleway", sans-serif;
   font-size: 12px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
@@ -1463,7 +1575,7 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .contact .contact__wrap .contact__form .contact__submit {
-    width: 30%;
+    width: 50%;
     height: 50px;
     font-size: 0.9em;
   }
@@ -1471,7 +1583,6 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 1024px) {
   .contact .contact__wrap .contact__form .contact__submit {
-    text-transform: uppercase;
     min-height: 60px;
     font-size: 1em;
   }
@@ -1480,7 +1591,7 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 530px) {
   .contact .contact__wrap .contact__form .contact__submit {
     font-size: 0.6rem;
-    width: 60%;
+    width: 40%;
     margin-top: 20px;
   }
 }
@@ -1488,31 +1599,21 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 640px) {
   .contact .contact__wrap .contact__form .contact__submit {
     font-size: 0.8rem;
-    width: 80%;
     min-height: 50px;
-  }
-}
-
-@media only screen and (orientation: landscape) and (min-width: 768px) {
-  .contact .contact__wrap .contact__form .contact__submit {
-    font-size: 0.9rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1024px) {
   .contact .contact__wrap .contact__form .contact__submit {
-    font-size: 1.2rem;
-    min-height: 70px;
-    text-transform: uppercase;
+    font-size: 0.8rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1248px) {
   .contact .contact__wrap .contact__form .contact__submit {
     font-size: 1rem;
-    width: 70%;
+    width: 50%;
     min-height: 60px;
-    border: 2px solid #fff;
   }
 }
 
@@ -2028,20 +2129,19 @@ body .main {
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
-  top: 0;
-  left: 0;
-  min-width: 400px;
+  min-width: 310px;
+  width: 90%;
   height: 240px;
   overflow: hidden;
   opacity: 1;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
-  margin: 0;
+  margin: 0 auto;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .projects .projects__wrapp .projects__project {
-    min-width: 50%;
+    width: 50%;
     height: 270px;
   }
 }
@@ -2054,7 +2154,7 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 530px) {
   .projects .projects__wrapp .projects__project {
-    min-width: 50%;
+    width: 50%;
   }
 }
 
@@ -2074,7 +2174,7 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 1248px) {
   .projects .projects__wrapp .projects__project {
-    min-width: 33.333%;
+    width: 33.333%;
     height: 220px;
   }
 }
@@ -2150,31 +2250,30 @@ body .main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  cursor: pointer;
   width: 50%;
   height: 40px;
   background-color: transparent;
   border: 2px solid #fff;
   color: #fff;
   font-weight: 400;
-  font-family: "Raleway", sans-serif;
   font-size: 12px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
-  font-size: 14px;
-  color: #45a29e;
-  border: 1px solid #45a29e;
+  width: 60%;
+  color: #0b0c10;
+  border: 1px solid #0b0c10;
+  font-weight: bold;
   position: absolute;
   top: 140%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .projects .projects__wrapp .projects__project .projects__learn-more {
-    width: 30%;
+    width: 50%;
     height: 50px;
     font-size: 0.9em;
   }
@@ -2182,7 +2281,6 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 1024px) {
   .projects .projects__wrapp .projects__project .projects__learn-more {
-    text-transform: uppercase;
     min-height: 60px;
     font-size: 1em;
   }
@@ -2191,7 +2289,7 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 530px) {
   .projects .projects__wrapp .projects__project .projects__learn-more {
     font-size: 0.6rem;
-    width: 60%;
+    width: 40%;
     margin-top: 20px;
   }
 }
@@ -2199,31 +2297,21 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 640px) {
   .projects .projects__wrapp .projects__project .projects__learn-more {
     font-size: 0.8rem;
-    width: 80%;
     min-height: 50px;
-  }
-}
-
-@media only screen and (orientation: landscape) and (min-width: 768px) {
-  .projects .projects__wrapp .projects__project .projects__learn-more {
-    font-size: 0.9rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1024px) {
   .projects .projects__wrapp .projects__project .projects__learn-more {
-    font-size: 1.2rem;
-    min-height: 70px;
-    text-transform: uppercase;
+    font-size: 0.8rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1248px) {
   .projects .projects__wrapp .projects__project .projects__learn-more {
     font-size: 1rem;
-    width: 70%;
+    width: 50%;
     min-height: 60px;
-    border: 2px solid #fff;
   }
 }
 
@@ -2251,8 +2339,17 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 1024px) {
   .projects .projects__wrapp .project__full {
-    height: 40%;
+    height: 80%;
     margin-top: 20%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 530px) {
+  .projects .projects__wrapp .project__full {
+    height: 50%;
+    width: 70%;
+    margin: 0 15%;
+    min-height: 320px;
   }
 }
 
@@ -2284,6 +2381,8 @@ body .main {
   position: relative;
   width: 100%;
   height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -2402,7 +2501,7 @@ body .main {
 
 .projects .projects__wrapp .project__full .project__description {
   width: 100%;
-  height: 50%;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2416,7 +2515,7 @@ body .main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 20px 0 0 15px;
+  padding: 20px 0 25px 15px;
 }
 
 .projects .projects__wrapp .project__full .project__description .project__page {
@@ -2482,6 +2581,12 @@ body .main {
   }
 }
 
+@media only screen and (orientation: portrait) and (min-width: 1024px) {
+  .projects .projects__wrapp .project__full .project__description .project__text {
+    font-size: 1em;
+  }
+}
+
 @media only screen and (orientation: landscape) and (min-width: 768px) {
   .projects .projects__wrapp .project__full .project__description .project__text {
     font-size: 0.8em;
@@ -2495,7 +2600,6 @@ body .main {
 }
 
 .projects .projects__wrapp .project__full .project__description .project__wrapper {
-  margin: 40px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2509,7 +2613,14 @@ body .main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin: 40px auto;
   width: 100%;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 640px) {
+  .projects .projects__wrapp .project__full .project__description .project__wrapper {
+    margin-top: 80px;
+  }
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -2520,7 +2631,7 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 1024px) {
   .projects .projects__wrapp .project__full .project__description .project__wrapper {
-    margin: 0;
+    margin: 100px auto;
   }
 }
 
@@ -2550,9 +2661,25 @@ body .main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  font-size: 0.8em;
+  width: 40%;
   height: 2.5em;
   background-color: #45a29e;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .projects .projects__wrapp .project__full .project__description .project__wrapper .project__visit {
+    font-size: 1em;
+    width: 30%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .projects .projects__wrapp .project__full .project__description .project__wrapper .project__visit {
+    width: 20%;
+  }
 }
 
 .projects .projects__wrapp .project__full .project__description .project__wrapper .project__visit:hover {
@@ -2602,6 +2729,7 @@ body .main {
 }
 
 .projects .projects__wrapp .project__full .project__description .project__close .project__icon {
+  cursor: pointer;
   font-size: 1.8em;
   color: #c5c6c7;
 }
@@ -2630,7 +2758,7 @@ body .main {
 }
 
 .projects .projects__wrapp .project__js {
-  background-image: url("../img/meditation.png");
+  background-image: url("../img/js.png");
   background-position: center;
   background-size: cover;
 }

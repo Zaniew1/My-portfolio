@@ -76,28 +76,27 @@
         .projects__project
             @include flex(center, center, row)
             position: relative
-            top: 0
-            left: 0
-            min-width: 400px
+            min-width: 310px
+            width: 90%
             height: 240px
             overflow: hidden
             opacity: 1
             transition: 0.4s ease-in-out
-            margin: 0
+            margin: 0 auto
             @include mq(tablet)
-                min-width: 50%
+                width: 50%
                 height: 270px
             @include mq(tablet-wide)
                 height: 290px
             @include mq-land(phone)
-                min-width: 50%
+                width: 50%
             @include mq-land(phablet)
                 height: 200px
             @include mq-land(tablet-wide)
                 opacity: 0
                 transform: translateY(30vh)  
             @include mq-land(desktop)
-                min-width: 33.333%
+                width: 33.333%
                 height: 220px
             @include mq-land(desktop-wide)
                 height: 260px   
@@ -132,14 +131,14 @@
             .projects__learn-more
                 @include flex(center, center, row)
                 @include button-style
-                font-size: 14px
-                color: $tone-color
-                border: 1px solid $tone-color
+                width: 60%
+                color: $bgc-color
+                border: 1px solid $bgc-color
+                font-weight: bold
                 position: absolute
                 top: 140%
                 left: 50%
                 transform: translate(-50%, -50%)
-                transition: 0.5s ease-in-out
         .project__full
             display: none
             visibility: hidden
@@ -156,8 +155,13 @@
                 height: 80%
                 margin-top: 10%
             @include mq (tablet-wide)
-                height: 40%
+                height: 80%
                 margin-top: 20%
+            @include mq-land(phone)
+                height: 50%
+                width: 70%
+                margin: 0 15%
+                min-height: 320px
             @include mq-land(tablet)
                 height: 80%
                 width: 70%
@@ -174,6 +178,7 @@
                 position: relative
                 width: 100%
                 height: 50%
+                object-fit: cover
                 @include mq(tablet)
                     height: 60%
                 @include mq(tablet-wide)
@@ -224,9 +229,10 @@
                             font-size: 1.6em 
             .project__description
                 width: 100%
-                height: 50%
+                background-color: $white-color
                 @include flex(flex-start, flex-start,column)
-                padding: 20px 0 0 15px
+                padding: 20px 0 25px 15px
+                
                 .project__page
                     font-size: 20px
                     letter-spacing: 1px
@@ -260,32 +266,44 @@
                     padding: 10px 30px 20px 0
                     @include mq(tablet)
                         font-size: 0.8em
+                    @include mq(tablet-wide)
+                        font-size: 1em
                     @include mq-land(tablet)
                         font-size: 0.8em
                     @include mq-land(tablet-wide)
                         font-size: 1em
                 .project__wrapper
-                    margin: 40px auto
                     @include flex(center, center, row)
+                    margin: 40px auto
                     width: 100%
+                    @include mq(phablet)
+                        margin-top: 80px
                     @include mq(tablet)
                         margin: 60px auto 30px auto
                     @include mq(tablet-wide)
-                        margin: 0
+                        margin: 100px auto
                     @include mq-land(tablet)
                         margin: 4% auto 0 auto
                     @include mq-land(tablet-wide)
                         margin: 0
                     .project__visit
                         @include flex(center, center, column)
-                        width: 50%
+                        font-size: 0.8em
+                        width: 40%
                         height: 2.5em
                         background-color: $tone-color
+                        transition: .3s ease-in-out
+                        @include mq(tablet)
+                            font-size: 1em
+                            width: 30%
+                        @include mq-land(tablet-wide)
+                            width: 20%
                         &:hover
                             background-color: $white-color
                         &:hover .project__link
                             color: $tone-color
                         .project__link
+                            
                             text-decoration: none
                             color: $white-color
                             text-transform: uppercase
@@ -295,11 +313,13 @@
                     @include flex(center, flex-end, column)
                     width: 50%
                     padding-right: 20px
+                    
                     @include mq(tablet)
                         padding-right: 50px
                     @include mq-land(tablet)
                         padding-right: 50px
                     .project__icon
+                        cursor: pointer
                         font-size: 1.8em
                         color: $font-color
                         @include mq(tablet)
@@ -314,7 +334,8 @@
             @include pictureJpg(brows-intro)
 
         .project__js
-            @include picturePng(meditation)
+            @include picturePng(js)
+            
 
         .project__react
             @include picturePng(react)

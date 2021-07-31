@@ -106,15 +106,34 @@
         position: relative
         .about__react
             @include picturePng(react)
-            width: 80px
-            height: 80px
-            position: absolute
-            transform: translate(-50%, -50%)
-            bottom: 50%
-            right: 50%
-            opacity: 1
-            animation: myOrbit 8s infinite linear
-            
+            @include animatedIcons
+ 
+        .about__js
+            @include picturePng(js)
+            @include animatedIcons
+            animation-delay : 0.8s
+        .about__html
+            @include picturePng(html)
+            @include animatedIcons
+            animation-delay : 1.6s
+        .about__css
+
+            @include picturePng(css)
+            @include animatedIcons
+            animation-delay : 2.4s
+        .about__bootstrap
+            @include picturePng(bootstrap)
+            @include animatedIcons
+            animation-delay : 3.2s
+        .about__sass
+            @include picturePng(sass)
+            @include animatedIcons
+            animation-delay : 4s
+        .about__git
+            @include picturePng(git)
+            @include animatedIcons
+            animation-delay : 4.8s
+        
         .about__text-wrap
             @include flex(center,center,column)
             margin: 10px auto
