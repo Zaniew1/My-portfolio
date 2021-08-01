@@ -17,6 +17,7 @@ body {
 }
 
 body .blur--active {
+  cursor: pointer;
   -webkit-filter: blur(5px);
           filter: blur(5px);
   position: fixed;
@@ -499,6 +500,7 @@ body .main {
   font-size: 12px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+  padding: 10px;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -1074,10 +1076,17 @@ body .main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 90%;
   margin: 10px auto;
   text-align: center;
   -webkit-transition: .6s ease-in;
   transition: .6s ease-in;
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .about .about__wrapper .about__text-wrap {
+    width: 60%;
+  }
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1024px) {
@@ -1108,6 +1117,12 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .about .about__wrapper .about__text-wrap--animate .about__me-header {
+    font-size: 28px;
+  }
+}
+
 .about .about__wrapper .about__text-wrap--animate .about__me-description {
   font-family: "Raleway", sans-serif;
   font-size: 11px;
@@ -1118,8 +1133,14 @@ body .main {
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .about .about__wrapper .about__text-wrap--animate .about__me-description {
-    font-size: 16px;
+    font-size: 1em;
     padding: 0 60px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .about .about__wrapper .about__text-wrap--animate .about__me-description {
+    font-size: 0.9em;
   }
 }
 
@@ -1570,6 +1591,7 @@ body .main {
   font-size: 12px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+  padding: 10px;
   margin: 20px auto 50px auto;
 }
 
@@ -2260,6 +2282,7 @@ body .main {
   font-size: 12px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+  padding: 10px;
   width: 60%;
   color: #0b0c10;
   border: 1px solid #0b0c10;
@@ -2643,7 +2666,7 @@ body .main {
 
 @media only screen and (orientation: landscape) and (min-width: 1024px) {
   .projects .projects__wrapp .project__full .project__description .project__wrapper {
-    margin: 0;
+    margin: 60px auto 30px auto;
   }
 }
 

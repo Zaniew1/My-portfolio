@@ -6,6 +6,27 @@ navToggle.addEventListener("click", ()=>{
     navToggle.classList.toggle('nav__toggle--active')
 })
 
+
+
+window.addEventListener("scroll", () =>{
+    if(window.innerWidth >= 768 && window.innerHeight >= 500)
+    {                                                                           // kod rozwijający małe menu po scrollu użytkownika 
+        if(window.pageYOffset >= 1 )                                            // włącz po najmniejszym scrollu 
+        {
+            document.querySelector('.nav__bar').classList.add('nav__bar--sticky-big-screen')
+        }
+        else                                                                           // wyłącz kiedy jest na górze
+        {
+            document.querySelector('.nav__bar').classList.remove('nav__bar--sticky-big-screen')
+    
+
+        }
+    }
+})
+
+
+
+
     const navLinks = [...document.querySelectorAll('.nav__link')];                  // wszystkie linki w nawigacji - jako tablica
     const homePosition = document.querySelector('.main').offsetTop;         // górna krawędź sekcji home
     const aboutPosition = document.querySelector('.about').offsetTop;               // górna krawędź sekcji about
@@ -142,6 +163,7 @@ navToggle.addEventListener("click", ()=>{
 const projectMore = [...document.querySelectorAll('.projects__learn-more')];
 // TABLICA Z WSZYSTKIMI PROJEKTAMI
 const projectShow =  [...document.querySelectorAll('.project__full')];
+
 projectMore.forEach((project, index) => {
     // TU JEST USTAWIONY EVEN LISTENER NA KAŻDYM BUTTONIE, DAJE INDEX TEGO BUTTONA,
     // A NASTĘPNIE NADAJE KLASĘ DLA PROJECT__FULL Z INDEXEM BUTTONA,
@@ -150,6 +172,50 @@ projectMore.forEach((project, index) => {
     projectShow[index].classList.add('project__full--display-block');
     blur.classList.add('blur--active');
     nav.classList.add('nav--active');
+    
+    const slideList = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+    const slideList1 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+    const slideList2 = ["img/brows.jpg", "img/me.jpg", "img/brows2.jpg"]
+    const slideList3 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+    const slideList4 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+    const slideList5 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+    const slideList6 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+    const slideList7 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
+    const slideList8 = ["img/brows.jpg", "wallpaper.jpg", "img/brows2.jpg"]
+    
+ 
+    let active = 0;
+    const sliderPicture = [...document.querySelectorAll('.project__slider')];
+    const leftArrow = document.querySelector('.project__arrow-icon--left');
+    const rightArrow = document.querySelector('.project__arrow-icon--right');
+    const slideListWithIndex = "slideList" + index
+    
+    console.log(slideListWithIndex)
+    // WYWOŁANIE TYCH FUNKCJI JEST NA ONCLICKU W HTMLU 
+// ZMIENIANIE SLAJDÓW ZA POMOCĄ STRZŁAŁEK
+const changeSlideRight = function(){ 
+    active++;
+    if(active === slideListWithIndex.length){
+        active = 0;
+    }
+   
+    sliderPicture[index].src = slideListWithIndex[active]
+    console.log(slideListWithIndex[active])
+    
+}
+document.querySelectorAll(".project__arrow-icon--right").forEach(arrow => arrow.addEventListener('click', changeSlideRight))
+
+const changeSlideLeft = function(){
+    active--;
+    
+    if(active < 0){
+        active =  slideListWithIndex.length - 1;
+        
+    }
+    
+    sliderPicture[index].src = slideListWithIndex[active]
+}
+document.querySelectorAll(".project__arrow-icon--left").forEach(arrow => arrow.addEventListener('click', changeSlideRight))
     //  TU JEST NADAWANE ROZMYCIE I ZACIEMNIENIE TŁA
     })
     })
@@ -158,53 +224,21 @@ projectMore.forEach((project, index) => {
 
 
 
-const slideList = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-const slideList1 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-const slideList2 = ["img/brows.jpg", "img/me.jpg", "img/brows2.jpg"]
-const slideList3 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-const slideList4 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-const slideList5 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-const slideList6 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-const slideList7 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-const slideList8 = ["img/brows.jpg", "wallpaper.jpg", "img/brows2.jpg"]
-
-
-let active = 0;
-const sliderPicture = [...document.querySelectorAll('.project__slider')];
-const projectIndexs = [...document.querySelectorAll('.project__full')]
-const leftArrow = document.querySelector('.project__arrow-icon--left');
-const rightArrow = document.querySelector('.project__arrow-icon--right');
 
 
 
 
-// WYWOŁANIE TYCH FUNKCJI JEST NA ONCLICKU W HTMLU 
-// ZMIENIANIE SLAJDÓW ZA POMOCĄ STRZŁAŁEK
-const changeSlideRight = function(){ 
-    active++;
-    if(active === slideList.length){
-        active = 0;
-    }
-    sliderPicture.forEach(slider => slider.src = slideList2[active])
-}
-
-
-const changeSlideLeft = function(){
-    active--;
-    if(active < 0){
-        active =  slideList.length - 1;
-    }
-    sliderPicture.forEach(slider => slider.src = slideList2[active])
-}
 
 // ZAMKNIĘCIE PROJEKTU
 const turnOffProject = function(){
     [...document.querySelectorAll('.project__full')].forEach(project => project.classList.remove('project__full--display-block'));
     blur.classList.remove('blur--active');
     nav.classList.remove('nav--active');
+    active = 0;
 }
 
 blur.addEventListener('click', ()=>{
+    active = 0;
     blur.classList.remove('blur--active');
     nav.classList.remove('nav--active');
     [...document.querySelectorAll('.project__full')].forEach(project => project.classList.remove('project__full--display-block'));
@@ -365,21 +399,7 @@ document.addEventListener('scroll', ()=>{
 
 
 
-window.addEventListener("scroll", () =>{
-    if(window.innerWidth >= 768 && window.innerHeight >= 500)
-    {                                                                           // kod rozwijający małe menu po scrollu użytkownika 
-        if(window.pageYOffset >= 1 )                                            // włącz po najmniejszym scrollu 
-        {
-            document.querySelector('.nav__bar').classList.add('nav__bar--sticky-big-screen')
-        }
-        else                                                                           // wyłącz kiedy jest na górze
-        {
-            document.querySelector('.nav__bar').classList.remove('nav__bar--sticky-big-screen')
-    
 
-        }
-    }
-})
 
 
 // ANIMACJA TEKSTU W SEKCJI FRONT 
