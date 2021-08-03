@@ -155,7 +155,7 @@ window.addEventListener("scroll", () =>{
         removeRedColor();
         reactProjects.classList.add('projects__name--active-color');
     })
-
+    // ROZMYCIE STRONY
     const blur = document.querySelector('.blur')
 
 // OTWORZENIE PROJEKTU
@@ -173,6 +173,11 @@ projectMore.forEach((project, index) => {
     blur.classList.add('blur--active');
     nav.classList.add('nav--active');
     
+    })
+})
+
+
+// ZDJĘCIA POSZCZEGÓLNYCH PROJEKTÓW 
     const slideList = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
     const slideList1 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
     const slideList2 = ["img/brows.jpg", "img/me.jpg", "img/brows2.jpg"]
@@ -181,46 +186,189 @@ projectMore.forEach((project, index) => {
     const slideList5 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
     const slideList6 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
     const slideList7 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-    const slideList8 = ["img/brows.jpg", "wallpaper.jpg", "img/brows2.jpg"]
+    const slideList8 = ["img/brows.jpg", "img/wallpaper.jpg", "img/brows2.jpg"]
     
  
     let active = 0;
     const sliderPicture = [...document.querySelectorAll('.project__slider')];
     const leftArrow = document.querySelector('.project__arrow-icon--left');
     const rightArrow = document.querySelector('.project__arrow-icon--right');
-    const slideListWithIndex = "slideList" + index
-    
-    console.log(slideListWithIndex)
-    // WYWOŁANIE TYCH FUNKCJI JEST NA ONCLICKU W HTMLU 
+
+
 // ZMIENIANIE SLAJDÓW ZA POMOCĄ STRZŁAŁEK
-const changeSlideRight = function(){ 
+document.querySelectorAll(".project__arrow-icon--right").forEach((arrow, index) => arrow.addEventListener('click', ()=>{
     active++;
-    if(active === slideListWithIndex.length){
-        active = 0;
+    if(index === 0)
+    {   
+        const slidePictureWithIndex = sliderPicture[0]
+        const slideListWithIndex = slideList
+        if(active === slideListWithIndex.length){
+            active = 0;
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active] 
     }
-   
-    sliderPicture[index].src = slideListWithIndex[active]
-    console.log(slideListWithIndex[active])
-    
-}
-document.querySelectorAll(".project__arrow-icon--right").forEach(arrow => arrow.addEventListener('click', changeSlideRight))
+    else if(index == 1)
+    {
+        const slidePictureWithIndex = sliderPicture[1]
+        const slideListWithIndex = slideList1
+        if(active === slideListWithIndex.length){
+            active = 0;
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active] 
+    }
+    else if(index === 2)
+    {
+        const slidePictureWithIndex = sliderPicture[2]
+        const slideListWithIndex = slideList2
+        if(active === slideListWithIndex.length){
+            active = 0;
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active] 
+    }
+    else if(index === 3)
+    {
+        const slidePictureWithIndex = sliderPicture[3]
+        const slideListWithIndex = slideList3
+        if(active === slideListWithIndex.length){
+            active = 0;
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active] 
+    }
+    else if(index === 4)
+    {
+        const slidePictureWithIndex = sliderPicture[4]
+        const slideListWithIndex = slideList4
+        if(active === slideListWithIndex.length){
+            active = 0;
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active] 
+    }
+    else if(index === 5)
+    {
+        const slidePictureWithIndex = sliderPicture[5]
+        const slideListWithIndex = slideList5
+        if(active === slideListWithIndex.length){
+            active = 0;
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active] 
+    }
+    else if(index === 6)
+    {
+        const slidePictureWithIndex = sliderPicture[6]
+        const slideListWithIndex = slideList6
+        if(active === slideListWithIndex.length){
+            active = 0;
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active] 
+    }
+    else if(index === 7)
+    {
+        const slidePictureWithIndex = sliderPicture[7]
+        const slideListWithIndex = slideList7
+        if(active === slideListWithIndex.length){
+            active = 0;
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active] 
+    }
+   else{
+        const slidePictureWithIndex = sliderPicture[8]
+        const slideListWithIndex = slideList8
+        if(active === slideListWithIndex.length){
+            active = 0;
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active] 
+   }
+}))
 
-const changeSlideLeft = function(){
+
+
+document.querySelectorAll(".project__arrow-icon--left").forEach((arrow, index) => arrow.addEventListener('click', ()=>{
     active--;
-    
-    if(active < 0){
-        active =  slideListWithIndex.length - 1;
-        
+    if(index === 0)
+    {   
+        const slidePictureWithIndex = sliderPicture[0]
+        const slideListWithIndex = slideList
+        if(active < 0){
+            active =  slideListWithIndex.length - 1;   
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active]
     }
-    
-    sliderPicture[index].src = slideListWithIndex[active]
-}
-document.querySelectorAll(".project__arrow-icon--left").forEach(arrow => arrow.addEventListener('click', changeSlideRight))
-    //  TU JEST NADAWANE ROZMYCIE I ZACIEMNIENIE TŁA
-    })
-    })
+    else if(index == 1)
+    {
+        const slidePictureWithIndex = sliderPicture[1]
+        const slideListWithIndex = slideList1
+        if(active < 0){
+            active =  slideListWithIndex.length - 1;   
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active]
+    }
+    else if(index === 2)
+    {
+        const slidePictureWithIndex = sliderPicture[2]
+        const slideListWithIndex = slideList2
+        if(active < 0){
+            active =  slideListWithIndex.length - 1;   
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active]
+    }
+    else if(index === 3)
+    {
+        const slidePictureWithIndex = sliderPicture[3]
+        const slideListWithIndex = slideList3
+        if(active < 0){
+            active =  slideListWithIndex.length - 1;   
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active]
+    }
+    else if(index === 4)
+    {
+        const slidePictureWithIndex = sliderPicture[4]
+        const slideListWithIndex = slideList4
+        if(active < 0){
+            active =  slideListWithIndex.length - 1;   
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active]
+    }
+    else if(index === 5)
+    {
+        const slidePictureWithIndex = sliderPicture[5]
+        const slideListWithIndex = slideList5
+        if(active < 0){
+            active =  slideListWithIndex.length - 1;   
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active]
+    }
+    else if(index === 6)
+    {
+        const slidePictureWithIndex = sliderPicture[6]
+        const slideListWithIndex = slideList6
+        if(active < 0){
+            active =  slideListWithIndex.length - 1;   
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active]
+    }
+    else if(index === 7)
+    {
+        const slidePictureWithIndex = sliderPicture[7]
+        const slideListWithIndex = slideList7
+        if(active < 0){
+            active =  slideListWithIndex.length - 1;   
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active]
+    }
+   else{
+        const slidePictureWithIndex = sliderPicture[8]
+        const slideListWithIndex = slideList8
+        if(active < 0){
+            active =  slideListWithIndex.length - 1;   
+        }
+        slidePictureWithIndex.src = slideListWithIndex[active]
+   }
+}))
 
-// SLIDER POKAZUJĄCY ZDJĄCIA PROJEKTU 
+   
+
+    
 
 
 
@@ -408,7 +556,9 @@ const h2Text = 'Junior Front-End Developer ';
 const timeOfAnimationH2 = 70;
 const timeOfH2AnimationDelay = 1000
 let indexTextH2 = 0;
+// JEŻELI SZEROKOŚĆ EKRANU POWYŻEJ 768PX TO ZANIMUJ 
 if(window.innerWidth >= 768){
+    // OPÓŹNIENIE ANIMACJI O 1 SEKUNDĘ 
     const letterH2AnimationDelay = ()=>{
         const letterH2Animation = ()=>{
         containerTextH2.textContent += h2Text[indexTextH2 ];
@@ -421,6 +571,7 @@ if(window.innerWidth >= 768){
     }
     const indexH2Delay = setInterval(letterH2AnimationDelay, timeOfH2AnimationDelay)
 }
+// JEŻELI SZEROKOŚĆ EKRANU PONIŻEJ 768PX TO USTAW TEXTCONTENT NA DOMYŚLNY NAPIS 
 else
 {
     containerTextH2.textContent =  h2Text
