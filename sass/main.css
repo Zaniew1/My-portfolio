@@ -1673,7 +1673,7 @@ body .main {
 }
 
 .contact .contact__wrap .contact__form .contact__submit:hover {
-  background-color: #66fcf1;
+  background-color: #45a29e;
   border: none;
 }
 
@@ -2848,5 +2848,158 @@ body .main {
             transform: rotate(360deg) translateY(200px) rotate(-360deg);
     opacity: 0;
   }
+}
+
+.thank-note {
+  background-image: url("../img/wallpaper.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.thank-note .thank-note__text {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 15px;
+  margin: 50px auto;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 530px) {
+  .thank-note .thank-note__text {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 640px) {
+  .thank-note .thank-note__text {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .thank-note .thank-note__text {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .thank-note .thank-note__text {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .thank-note .thank-note__text {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .thank-note .thank-note__text {
+    font-size: 40px;
+  }
+}
+
+.thank-note .thank-note__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 60%;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 530px) {
+  .thank-note .thank-note__link {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 640px) {
+  .thank-note .thank-note__link {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .thank-note .thank-note__link {
+    height: 70px;
+    width: 40%;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 1024px) {
+  .thank-note .thank-note__link {
+    height: 100px;
+    width: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .thank-note .thank-note__link {
+    height: 50px;
+    width: 20%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .thank-note .thank-note__link {
+    height: 90px;
+    width: 30%;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .thank-note .thank-note__link {
+    width: 20%;
+    font-size: 20px;
+  }
+}
+
+.thank-note .thank-note__link:hover {
+  background-color: #45a29e;
+  border: 0;
 }
 /*# sourceMappingURL=main.css.map */
