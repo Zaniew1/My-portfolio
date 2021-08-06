@@ -46,29 +46,29 @@ window.addEventListener("scroll", () =>{
 
             if(index === 0){                                    
                 const scrollTo = window.setInterval(function(){
-                    window.scrollTo( 0, homePosition - 20 ); 
+                    window.scrollTo( 0, homePosition); 
                     window.clearInterval( scrollTo );          
-                },6 ); 
+                },); 
             }
 
             else if(index === 1){
                 const scrollTo = window.setInterval(function(){
-                    window.scrollTo( 0, aboutPosition - 20 ); 
+                    window.scrollTo( 0, aboutPosition); 
                     window.clearInterval( scrollTo );          
-                },6 ); 
+                },); 
             }
             else if(index === 2){
                 const scrollTo = window.setInterval(function(){
-                    window.scrollTo( 0, projectsPosition - 20 ); 
+                    window.scrollTo( 0, projectsPosition); 
                     window.clearInterval( scrollTo );          
-                },6 ); 
+                },); 
             }
 
-            else {
+            else if (index === 3) {
                 const scrollTo = window.setInterval(function(){
-                    window.scrollTo( 0, contactPosition - 20 ); 
+                    window.scrollTo( 0, contactPosition); 
                     window.clearInterval( scrollTo);          
-                },6 ); 
+                },); 
             }
             
            
@@ -129,6 +129,8 @@ window.addEventListener("scroll", () =>{
     const htmlCssProjects = document.querySelector('.projects__name--two')
     const jsProjects = document.querySelector('.projects__name--three')
     const reactProjects = document.querySelector('.projects__name--four')
+
+    // FUNKCJA ZABIERAJĄCA KOLOR Z POSZCZEGOLNYCH DIVÓW: HTML, JS, REACT W SEKCJI PROJECTS 
     const removeRedColor = ()=>{
         allProjects.classList.remove('projects__name--active-color');
         htmlCssProjects.classList.remove('projects__name--active-color');
@@ -178,15 +180,15 @@ projectMore.forEach((project, index) => {
 
 
 // ZDJĘCIA POSZCZEGÓLNYCH PROJEKTÓW 
-    const slideList = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-    const slideList1 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-    const slideList2 = ["img/brows.jpg", "img/me.jpg", "img/brows2.jpg"]
-    const slideList3 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-    const slideList4 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-    const slideList5 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-    const slideList6 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-    const slideList7 = ["img/brows.jpg", "img/brows1.jpg", "img/brows2.jpg"]
-    const slideList8 = ["img/brows.jpg", "img/wallpaper.jpg", "img/brows2.jpg"]
+    const slideList = ["img/brows.jpg", "img/brows2.jpg", "img/brows4.jpg"]
+    const slideList1 = ["img/mz1.jpg", "img/mz2.jpg",]
+    const slideList2 = ["img/soon2.jpg"]
+    const slideList3 = ["img/soon.jpg"]
+    const slideList4 = ["img/soon.jpg"]
+    const slideList5 = ["img/soon.jpg"]
+    const slideList6 = ["img/soon2.jpg"]
+    const slideList7 = ["img/soon2.jpg"]
+    const slideList8 = ["img/soon2.jpg"]
     
  
     let active = 0;
@@ -211,6 +213,7 @@ document.querySelectorAll(".project__arrow-icon--right").forEach((arrow, index) 
     {
         const slidePictureWithIndex = sliderPicture[1]
         const slideListWithIndex = slideList1
+ 
         if(active === slideListWithIndex.length){
             active = 0;
         }
