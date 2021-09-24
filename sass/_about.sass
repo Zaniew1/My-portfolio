@@ -101,38 +101,101 @@
                 opacity: 1
     .about__wrapper
         @include flex(center,center,column)
-        width: 90%
-        height: 40vh
+        
+  
         position: relative
-        .about__react
-            @include picturePng(react)
-            @include animatedIcons
- 
-        .about__js
-            @include picturePng(js)
-            @include animatedIcons
-            animation-delay : 0.8s
-        .about__html
-            @include picturePng(html)
-            @include animatedIcons
-            animation-delay : 1.6s
-        .about__css
-
-            @include picturePng(css)
-            @include animatedIcons
-            animation-delay : 2.4s
-        .about__bootstrap
-            @include picturePng(bootstrap)
-            @include animatedIcons
-            animation-delay : 3.2s
-        .about__sass
-            @include picturePng(sass)
-            @include animatedIcons
-            animation-delay : 4s
-        .about__git
-            @include picturePng(git)
-            @include animatedIcons
-            animation-delay : 4.8s
+        .about__portrait
+            width: 70vw
+            height: 65vw
+            border-radius: 10%
+            position: relative
+            object-fit: contain
+            opacity: 0.9
+            @include picturePng(1)
+            @include mq(tablet)
+                width: 57vw
+                height: 54vw
+            @include mq-land(tablet)
+                width: 26vw
+                height: 24vw
+            .about__react
+                @include picturePng(react)
+                @include animatedIcons
+                bottom: 20%
+                right: 85% 
+                @include mq(tablet)
+                    bottom: 30%
+                    right: 95% 
+                
+            .about__js
+                @include picturePng(js)
+                @include animatedIcons
+                bottom: 40%
+                right: 80% 
+                
+                @include mq(tablet)
+                    bottom: 50%
+                    right: 93% 
+                @include mq-land(tablet)
+                    animation: myOrbit 10s infinite linear
+                    animation-delay: 0.8s   
+            .about__html
+                @include picturePng(html)
+                @include animatedIcons
+                bottom: 60%
+                right: 75% 
+                @include mq(tablet)
+                    bottom: 70%
+                    right: 90%                 
+                @include mq-land(tablet)
+                    animation: myOrbit 10s infinite linear
+                    animation-delay: 1.6s
+            .about__css
+                @include picturePng(css)
+                @include animatedIcons
+                bottom: 80%
+                right: 65% 
+                @include mq(tablet)
+                    bottom: 85%
+                    right: 75%   
+                @include mq-land(tablet)
+                    animation: myOrbit 10s infinite linear
+                    animation-delay: 2.4s
+            .about__bootstrap
+                @include picturePng(bootstrap)
+                @include animatedIcons
+                bottom: 20%
+                right: 1% 
+                @include mq(tablet)
+                    bottom: 30%
+                    right: 5%  
+                    
+                @include mq-land(tablet)
+                    animation: myOrbit 10s infinite linear
+                    animation-delay: 3.2s
+            .about__sass
+                @include picturePng(sass)
+                @include animatedIcons
+                bottom: 40%
+                right: 5% 
+                @include mq(tablet)
+                    bottom: 50%
+                    right: 5% 
+                @include mq-land(tablet)
+                    animation: myOrbit 10s infinite linear
+                    animation-delay: 4s
+            .about__git
+                @include picturePng(git)
+                
+                bottom: 60%
+                right: 10% 
+                @include mq(tablet)
+                    bottom: 70%
+                    right: 10% 
+                    
+                @include mq-land(tablet)
+                    animation: myOrbit 10s infinite linear
+                    animation-delay: 4.8s
         
         .about__text-wrap
             @include flex(center,center,column)
@@ -145,7 +208,7 @@
             @include mq-land(tablet-wide)
                 transform: translateY(10vh)
                 opacity: 0
-        
+                
             .about__me-header
                 font-family: $family-raleway
                 font-size: 20px
