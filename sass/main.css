@@ -557,6 +557,15 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 640px) {
+  .front .front__text .front__button {
+    width: 30vw;
+    height: 3em;
+    font-size: 14px;
+    border: 1px solid #fff;
+  }
+}
+
 .front .front__text .front__button:hover {
   background-color: #45a29e;
   border: none;
@@ -923,6 +932,12 @@ body .main {
   position: relative;
 }
 
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .about .about__wrapper {
+    margin-top: 100px;
+  }
+}
+
 .about .about__wrapper .about__portrait {
   width: 70vw;
   height: 65vw;
@@ -947,6 +962,13 @@ body .main {
   .about .about__wrapper .about__portrait {
     width: 26vw;
     height: 24vw;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait {
+    width: 35vw;
+    height: 32vw;
   }
 }
 
@@ -976,8 +998,8 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 768px) {
   .about .about__wrapper .about__portrait .about__react {
     opacity: 0;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -988,10 +1010,38 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__react {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__react {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .about .about__wrapper .about__portrait .about__react {
     bottom: 30%;
     right: 95%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__react {
+    -webkit-animation: myOrbit-desktop 10s infinite linear;
+            animation: myOrbit-desktop 10s infinite linear;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__react {
+    -webkit-animation: myOrbit-desktop-wide 10s infinite linear;
+            animation: myOrbit-desktop-wide 10s infinite linear;
   }
 }
 
@@ -1021,8 +1071,8 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 768px) {
   .about .about__wrapper .about__portrait .about__js {
     opacity: 0;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -1030,6 +1080,20 @@ body .main {
     right: 50%;
     -webkit-animation: myOrbit 10s infinite linear;
             animation: myOrbit 10s infinite linear;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__js {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__js {
+    width: 70px;
+    height: 70px;
   }
 }
 
@@ -1044,6 +1108,24 @@ body .main {
   .about .about__wrapper .about__portrait .about__js {
     -webkit-animation: myOrbit 10s infinite linear;
             animation: myOrbit 10s infinite linear;
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__js {
+    -webkit-animation: myOrbit-desktop 10s infinite linear;
+            animation: myOrbit-desktop 10s infinite linear;
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__js {
+    -webkit-animation: myOrbit-desktop-wide 10s infinite linear;
+            animation: myOrbit-desktop-wide 10s infinite linear;
     -webkit-animation-delay: 0.8s;
             animation-delay: 0.8s;
   }
@@ -1075,8 +1157,8 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 768px) {
   .about .about__wrapper .about__portrait .about__html {
     opacity: 0;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -1084,6 +1166,20 @@ body .main {
     right: 50%;
     -webkit-animation: myOrbit 10s infinite linear;
             animation: myOrbit 10s infinite linear;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__html {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__html {
+    width: 70px;
+    height: 70px;
   }
 }
 
@@ -1098,6 +1194,24 @@ body .main {
   .about .about__wrapper .about__portrait .about__html {
     -webkit-animation: myOrbit 10s infinite linear;
             animation: myOrbit 10s infinite linear;
+    -webkit-animation-delay: 1.6s;
+            animation-delay: 1.6s;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__html {
+    -webkit-animation: myOrbit-desktop 10s infinite linear;
+            animation: myOrbit-desktop 10s infinite linear;
+    -webkit-animation-delay: 1.6s;
+            animation-delay: 1.6s;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__html {
+    -webkit-animation: myOrbit-desktop-wide 10s infinite linear;
+            animation: myOrbit-desktop-wide 10s infinite linear;
     -webkit-animation-delay: 1.6s;
             animation-delay: 1.6s;
   }
@@ -1129,8 +1243,8 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 768px) {
   .about .about__wrapper .about__portrait .about__css {
     opacity: 0;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -1138,6 +1252,20 @@ body .main {
     right: 50%;
     -webkit-animation: myOrbit 10s infinite linear;
             animation: myOrbit 10s infinite linear;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__css {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__css {
+    width: 70px;
+    height: 70px;
   }
 }
 
@@ -1152,6 +1280,24 @@ body .main {
   .about .about__wrapper .about__portrait .about__css {
     -webkit-animation: myOrbit 10s infinite linear;
             animation: myOrbit 10s infinite linear;
+    -webkit-animation-delay: 2.4s;
+            animation-delay: 2.4s;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__css {
+    -webkit-animation: myOrbit-desktop 10s infinite linear;
+            animation: myOrbit-desktop 10s infinite linear;
+    -webkit-animation-delay: 2.4s;
+            animation-delay: 2.4s;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__css {
+    -webkit-animation: myOrbit-desktop-wide 10s infinite linear;
+            animation: myOrbit-desktop-wide 10s infinite linear;
     -webkit-animation-delay: 2.4s;
             animation-delay: 2.4s;
   }
@@ -1183,8 +1329,8 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 768px) {
   .about .about__wrapper .about__portrait .about__bootstrap {
     opacity: 0;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -1192,6 +1338,20 @@ body .main {
     right: 50%;
     -webkit-animation: myOrbit 10s infinite linear;
             animation: myOrbit 10s infinite linear;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__bootstrap {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__bootstrap {
+    width: 70px;
+    height: 70px;
   }
 }
 
@@ -1206,6 +1366,24 @@ body .main {
   .about .about__wrapper .about__portrait .about__bootstrap {
     -webkit-animation: myOrbit 10s infinite linear;
             animation: myOrbit 10s infinite linear;
+    -webkit-animation-delay: 3.2s;
+            animation-delay: 3.2s;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__bootstrap {
+    -webkit-animation: myOrbit-desktop 10s infinite linear;
+            animation: myOrbit-desktop 10s infinite linear;
+    -webkit-animation-delay: 3.2s;
+            animation-delay: 3.2s;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__bootstrap {
+    -webkit-animation: myOrbit-desktop-wide 10s infinite linear;
+            animation: myOrbit-desktop-wide 10s infinite linear;
     -webkit-animation-delay: 3.2s;
             animation-delay: 3.2s;
   }
@@ -1237,8 +1415,8 @@ body .main {
 @media only screen and (orientation: landscape) and (min-width: 768px) {
   .about .about__wrapper .about__portrait .about__sass {
     opacity: 0;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -1246,6 +1424,20 @@ body .main {
     right: 50%;
     -webkit-animation: myOrbit 10s infinite linear;
             animation: myOrbit 10s infinite linear;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__sass {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__sass {
+    width: 70px;
+    height: 70px;
   }
 }
 
@@ -1265,12 +1457,74 @@ body .main {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__sass {
+    -webkit-animation: myOrbit-desktop 10s infinite linear;
+            animation: myOrbit-desktop 10s infinite linear;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__sass {
+    -webkit-animation: myOrbit-desktop-wide 10s infinite linear;
+            animation: myOrbit-desktop-wide 10s infinite linear;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+  }
+}
+
 .about .about__wrapper .about__portrait .about__git {
   background-image: url("../img/git.png");
   background-position: center;
   background-size: cover;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 1;
   bottom: 60%;
   right: 10%;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .about .about__wrapper .about__portrait .about__git {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .about .about__wrapper .about__portrait .about__git {
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    bottom: 50%;
+    right: 50%;
+    -webkit-animation: myOrbit 10s infinite linear;
+            animation: myOrbit 10s infinite linear;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__git {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__git {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
@@ -1284,6 +1538,24 @@ body .main {
   .about .about__wrapper .about__portrait .about__git {
     -webkit-animation: myOrbit 10s infinite linear;
             animation: myOrbit 10s infinite linear;
+    -webkit-animation-delay: 4.8s;
+            animation-delay: 4.8s;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1248px) {
+  .about .about__wrapper .about__portrait .about__git {
+    -webkit-animation: myOrbit-desktop 10s infinite linear;
+            animation: myOrbit-desktop 10s infinite linear;
+    -webkit-animation-delay: 4.8s;
+            animation-delay: 4.8s;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1440px) {
+  .about .about__wrapper .about__portrait .about__git {
+    -webkit-animation: myOrbit-desktop-wide 10s infinite linear;
+            animation: myOrbit-desktop-wide 10s infinite linear;
     -webkit-animation-delay: 4.8s;
             animation-delay: 4.8s;
   }
@@ -3111,7 +3383,7 @@ body .main {
             transform: rotate(0deg) translateY(200px) rotate(0deg);
     opacity: 0;
   }
-  20% {
+  15% {
     opacity: 0;
   }
   30% {
@@ -3120,7 +3392,7 @@ body .main {
   70% {
     opacity: 1;
   }
-  80% {
+  85% {
     opacity: 0;
   }
   100% {
@@ -3136,7 +3408,7 @@ body .main {
             transform: rotate(0deg) translateY(200px) rotate(0deg);
     opacity: 0;
   }
-  20% {
+  15% {
     opacity: 0;
   }
   30% {
@@ -3145,12 +3417,112 @@ body .main {
   70% {
     opacity: 1;
   }
-  80% {
+  85% {
     opacity: 0;
   }
   100% {
     -webkit-transform: rotate(360deg) translateY(200px) rotate(-360deg);
             transform: rotate(360deg) translateY(200px) rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes myOrbit-desktop {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(300px) rotate(0deg);
+            transform: rotate(0deg) translateY(300px) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateY(300px) rotate(-360deg);
+            transform: rotate(360deg) translateY(300px) rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes myOrbit-desktop {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(300px) rotate(0deg);
+            transform: rotate(0deg) translateY(300px) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateY(300px) rotate(-360deg);
+            transform: rotate(360deg) translateY(300px) rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes myOrbit-desktop-wide {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(400px) rotate(0deg);
+            transform: rotate(0deg) translateY(400px) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateY(400px) rotate(-360deg);
+            transform: rotate(360deg) translateY(400px) rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes myOrbit-desktop-wide {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(400px) rotate(0deg);
+            transform: rotate(0deg) translateY(400px) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateY(400px) rotate(-360deg);
+            transform: rotate(360deg) translateY(400px) rotate(-360deg);
     opacity: 0;
   }
 }

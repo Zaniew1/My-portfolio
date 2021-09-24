@@ -112,11 +112,16 @@
         height: 35px
     @include mq-land(tablet)
         opacity: 0
-        width: 50px
-        height: 50px
+        width: 40px
+        height: 40px
         position: absolute
         transform: translate(-50%, -50%)
         bottom: 50%
         right: 50%
         animation: myOrbit 10s infinite linear
-        
+    @include mq-land(desktop)
+        width: 60px
+        height: 60px
+    @include mq-land(desktop-wide)
+        width: 70px
+        height: 70px
